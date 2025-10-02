@@ -1,3 +1,3 @@
 git add .
-git commit -m '3'
+git commit -m 'del New Folder'
 git push
