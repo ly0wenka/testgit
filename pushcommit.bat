@@ -1,3 +1,3 @@
 git add .
-git commit -m 'del New Folder'
-git push
+git commit -m "add docker run"
+git push -f
