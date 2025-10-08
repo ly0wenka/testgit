@@ -1,3 +1,4 @@
+name = helloworld
 all:
-	gcc helloworld.c
-	./a.out
+	gcc $(name).c -o $(name)
+	./$(name).out
