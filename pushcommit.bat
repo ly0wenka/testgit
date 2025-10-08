@@ -1,3 +1,3 @@
 git add .
-git commit -m "add makefile"
+git commit -m "update makefile"
 git push
