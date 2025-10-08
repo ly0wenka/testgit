@@ -1,2 +1,2 @@
-gcc .\helloworld.c -o app
-app.exe
+gcc .\helloworld.c
+a.exe

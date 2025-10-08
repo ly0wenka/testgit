@@ -1,3 +1,3 @@
 git add .
-git commit -m "docker build"
+git commit -m "add makefile"
 git push
