@@ -1,3 +1,3 @@
 git add .
-git commit -m "update makefile with variable fix run"
+git commit -m "add projects"
 git push

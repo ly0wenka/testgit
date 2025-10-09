@@ -5,10 +5,7 @@ FROM gcc:latest
 WORKDIR /app
 
 # Copy the C source file into the container
-COPY helloworld.c .
-
-# Compile the C program
-RUN gcc -o hello helloworld.c
+COPY helloworld.c makefile .
 
 # Run the compiled program
-CMD ["./hello"]
+CMD ["make"]
