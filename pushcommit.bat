@@ -1,3 +1,3 @@
 git add .
-git commit -m "add l2dod2 project"
+git commit -m "add Додаткові індивідуальні завдання"
 git push
