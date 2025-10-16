@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Text;
 
 class Program
 {
     static void Main(string[] args)
     {
-
         string number = string.Empty;
         if (args.Length == 0)
         {
@@ -17,7 +17,7 @@ class Program
 
         ProcessStartInfo psi = new ProcessStartInfo
         {
-            FileName = @"C:\Users\L\Downloads\New folder (100)\NumberToWords\bin\Debug\net8.0\NumberToWords.exe",
+            FileName = @"S:\Users\L\Downloads\New folder (175)\testgit\l2dod2\NumberToWords\bin\Debug\net8.0\NumberToWords.exe",
             Arguments = $"dsadad sadasd -n {number}",
             RedirectStandardOutput = true,
             UseShellExecute = false,

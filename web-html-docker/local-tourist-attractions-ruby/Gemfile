@@ -1,0 +1,6 @@
+
+# Specify the Ruby version
+ruby '3.1.7'  # or your project's required Ruby version
+# Specify the source for gems
+source 'https://rubygems.org'
+gem 'jekyll', '~> 4.2'  # or the version compatible with your project

@@ -11,6 +11,7 @@ void print_number_as_text(const char *number) {
 }
 
 int main(int argc, char *argv[]) {
+    SetConsoleOutputCP(CP_UTF8);
     int opt;
     char *number = NULL;
 

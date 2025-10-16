@@ -36,7 +36,7 @@ int main(int argc, char *argv[]) {
     // snprintf(command, sizeof(command), "\"S:\\Users\\L\\Downloads\\New folder (100)\\GCC\\number_to_words.exe\" -n %s", number);
 
     // Spawn the process using spawnl with _P_NOWAIT
-    int result = _spawnl(_P_NOWAIT, "S:\\Users\\L\\Downloads\\New folder (100)\\GCC\\number_to_words.exe", "number_to_words.exe", "-n", number, NULL);
+    int result = _spawnl(_P_NOWAIT, "S:\\Users\\L\\Downloads\\New folder (175)\\testgit\\l2dod2\\GCC\\number_to_words.exe", "number_to_words.exe", "-n", number, NULL);
 
     if (result == -1) {
         // If spawnl fails, print error and return
