@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-//#include <sys/wait.h>
+#include <sys/wait.h>
 
 void print_number_as_text(const char *number) {
     if (number[0] == '-') {
