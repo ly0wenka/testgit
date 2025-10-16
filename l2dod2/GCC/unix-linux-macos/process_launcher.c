@@ -41,7 +41,7 @@ int main(int argc, char *argv[]) {
     
     if (pid == 0) {  // Child process
         // Prepare the arguments for exec
-        char *executable = "/home/oleksii_kondratov/testgit/l2dod2/GCC/1.out";  // Path to the executable
+        char *executable = "/Users/l/testgit/l2dod2/GCC/1.out";  // Path to the executable
         char *args[] = {executable, "-n", number, NULL};
 
         // Execute the external program
