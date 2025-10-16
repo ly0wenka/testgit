@@ -1,3 +1,3 @@
 git add .
-git commit -m "add webaps cpps projects etc"
+git commit -m "fix after push"
 git push
