@@ -35,7 +35,11 @@ int main(int argc, char *argv[])
     {
         // Якщо аргументів немає, запитуємо у користувача
         printf("Введіть номер числа Фібоначчі: ");
+#ifdef _MSC_VER
+        scanf_s("%d", &n);
+#else
         scanf("%d", &n);
+#endif
     }
 
     if (n < 0)

@@ -1,3 +1,3 @@
 git add .
-git commit -m "fix l2dod2z2 linux"
+git commit -m "java l2dod2z7 linux"
 git push
