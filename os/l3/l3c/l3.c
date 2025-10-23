@@ -44,11 +44,6 @@ void daemonize() {
 }
 
 int main() {
-    FILE *fp = fopen("/var/run/mydaemon.pid", "w");
-    if (fp) {
-        fprintf(fp, "%d\n", getpid());
-        fclose(fp);
-    }
     printf("Starting daemon...\n");
     daemonize();
     openlog("linux_daemon", LOG_PID, LOG_DAEMON);
