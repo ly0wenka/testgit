@@ -3,11 +3,13 @@ all:
 	./l3.out
 
 showdemon:
-	ps aux | grep mydaemon
+	ps aux | grep l3.out
 
+kill: kill1 kill2
+	
 kill1:
-	kill -SIGUSR1 $(pid)
+	kill -SIGUSR1 $(pgrep l3.out)
 kill2:
-	kill -SIGINT $(pid)
+	kill -SIGINT $(pgrep l3.out)
 mac:
-	log stream --predicate 'process == "mydaemon"'
+	log stream --predicate 'process == "l3.out"'
