@@ -14,4 +14,4 @@ kill2:
 mac:
 	log show --predicate 'process == "l3.out"' --info --last 1h
 linux:
-	sudo journalctl -t l3.out --since "1 hour ago"
+	sudo journalctl -t linux_daemon --since "1 hour ago"
