@@ -8,8 +8,8 @@ showdemon:
 kill: kill1 kill2
 	
 kill1:
-	kill -SIGUSR1 $(pgrep l3.out)
+	kill -SIGUSR1 `pgrep l3.out`
 kill2:
-	kill -SIGINT $(pgrep l3.out)
+	kill -SIGINT `pgrep l3.out`
 mac:
 	log show --predicate 'process == "l3.out"' --info --last 1h
