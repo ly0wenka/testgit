@@ -13,3 +13,5 @@ kill2:
 	kill -SIGINT `pgrep l3.out`
 mac:
 	log show --predicate 'process == "l3.out"' --info --last 1h
+linux:
+	sudo journalctl -t l3.out --since "1 hour ago"
