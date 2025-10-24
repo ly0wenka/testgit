@@ -6,11 +6,15 @@ showdemon:
 	ps aux | grep l3.out
 
 kill: kill1 kill2
-	
+kill-kali: kill1-kali kill2-kali
 kill1:
 	kill -SIGUSR1 `pgrep l3.out`
 kill2:
 	kill -SIGINT `pgrep l3.out`
+kill1-kali:
+	kill -SIGUSR1 (pgrep l3.out)
+kill2-kali:
+	kill -SIGINT (pgrep l3.out)
 mac:
 	log show --predicate 'process == "l3.out"' --info --last 1h
 linux:
