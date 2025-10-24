@@ -9,3 +9,5 @@ kill1:
 	kill -SIGUSR1 $(pid)
 kill2:
 	kill -SIGINT $(pid)
+mac:
+	log stream --predicate 'process == "mydaemon"'
