@@ -4,6 +4,8 @@ all:
 
 showdemon:
 	ps aux | grep mydaemon
-	
-kill:
-	kill -SIGUSR1 $(cat /var/run/mydaemon.pid)
+
+kill1:
+	kill -SIGUSR1 $(pid)
+kill2:
+	kill -SIGINT $(pid)
