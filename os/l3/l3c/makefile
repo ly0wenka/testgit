@@ -12,4 +12,4 @@ kill1:
 kill2:
 	kill -SIGINT $(pgrep l3.out)
 mac:
-	log stream --predicate 'process == "l3.out"'
+	log show --predicate 'process == "l3.out"' --info --last 1h
