@@ -1,6 +1,6 @@
 all:
 	gcc l3.c -o l3.out
-	./l3.out
+	./l3.out &
 
 showdemon:
 	ps aux | grep l3.out
