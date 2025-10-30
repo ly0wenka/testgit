@@ -1,3 +1,6 @@
+#define UNICODE
+#define _UNICODE
+
 #include <windows.h>
 #include <string>
 #include <thread>
@@ -8,7 +11,6 @@
 const std::wstring SERVICE_NAME = L"MyDaemonCpp";
 bool running = true;
 
-// Signal handler to stop the daemon gracefully
 void SignalHandler(int signal)
 {
     if (signal == SIGINT || signal == SIGTERM)
@@ -24,7 +26,6 @@ void SignalHandler(int signal)
     }
 }
 
-// Function to write to the Windows Event Log
 void WriteEventLog(const std::wstring& message)
 {
     HANDLE hEventLog = RegisterEventSource(NULL, SERVICE_NAME.c_str());
@@ -38,18 +39,14 @@ void WriteEventLog(const std::wstring& message)
 
 int wmain()
 {
-    // Register signal handlers (Ctrl+C or termination)
     std::signal(SIGINT, SignalHandler);
     std::signal(SIGTERM, SignalHandler);
 
     WriteEventLog(L"Демон запущений.");
 
-    // Main daemon loop
     while (running)
     {
         std::this_thread::sleep_for(std::chrono::seconds(10));
-
-        // Here you could add code to check status, process events, etc.
     }
 
     WriteEventLog(L"Демон завершив роботу.");
