@@ -1,7 +1,6 @@
 import time
 import win32evtlogutil
 import win32evtlog
-import win32event
 import win32api
 import win32con
 import sys
@@ -13,9 +12,11 @@ def write_event(message, event_type=win32evtlog.EVENTLOG_INFORMATION_TYPE):
     Write a message to the Windows Event Log under the custom source.
     """
     try:
-        # Create source if it doesn't exist
-        if not win32evtlogutil.QuerySourceInfo(SERVICE_NAME):
+        # Attempt to create the source (will silently fail if it already exists)
+        try:
             win32evtlogutil.AddSourceToRegistry(SERVICE_NAME, "Application")
+        except Exception:
+            pass  # Source already exists
 
         # Write the event
         win32evtlogutil.ReportEvent(SERVICE_NAME, eventID=1, eventCategory=0,
