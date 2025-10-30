@@ -1,0 +1,32 @@
+
+services:
+  postgres:
+    image: postgres:14
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: msf
+      POSTGRES_PASSWORD: msf
+      POSTGRES_DB: msf_database
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U msf -d msf_database"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  metasploit:
+    image: metasploitframework/metasploit-framework:latest
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: "postgresql://msf:msf@postgres:5432/msf_database"
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./workspace:/opt/metasploit-framework/.msf4
+    command: msfconsole
+
+volumes:
+  pgdata:

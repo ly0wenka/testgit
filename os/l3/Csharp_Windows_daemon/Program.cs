@@ -1,7 +1,4 @@
-﻿using System;
-using System.Diagnostics;
-using System.ServiceProcess;
-using System.Threading;
+﻿using System.Diagnostics;
 
 public class Program
 {
@@ -20,7 +17,7 @@ public class Program
             EventLog.CreateEventSource(ServiceName, "Application");
         }
 
-        EventLog.WriteEntry(ServiceName, "Демон запущений.", EventLogEntryType.Information);
+        EventLog.WriteEntry(ServiceName, "Демон запущений.", EventLogEntryType.Warning);
 
         // Основний цикл роботи демона
         while (true)
