@@ -1,0 +1,1 @@
+ g++ -std=c++17 l3.cpp -o l3g.exe -mconsole

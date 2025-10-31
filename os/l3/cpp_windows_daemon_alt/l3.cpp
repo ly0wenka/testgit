@@ -44,23 +44,29 @@ void WINAPI ServiceCtrlHandler(DWORD ctrlCode)
 
 void WINAPI ServiceMain(DWORD argc, LPWSTR* argv)
 {
-    hStatus = RegisterServiceCtrlHandler(SERVICE_NAME.c_str(), ServiceCtrlHandler);
+        hStatus = RegisterServiceCtrlHandler(SERVICE_NAME.c_str(), ServiceCtrlHandler);
     if (!hStatus) return;
 
     ServiceStatus.dwServiceType = SERVICE_WIN32_OWN_PROCESS;
     ServiceStatus.dwCurrentState = SERVICE_START_PENDING;
     SetServiceStatus(hStatus, &ServiceStatus);
 
-    WriteEventLog(L"Служба запущена.");
+    // Всі довгі ініціалізації у потоці
+    std::thread initThread([](){
+        // Симуляція важкої роботи на старті
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+        WriteEventLog(L"Служба запущена.");
+    });
+    initThread.detach();
 
     ServiceStatus.dwCurrentState = SERVICE_RUNNING;
     SetServiceStatus(hStatus, &ServiceStatus);
 
-    // Main service loop
+    // Main loop
     while (running)
     {
         std::this_thread::sleep_for(std::chrono::seconds(10));
-        // Add your periodic work here
+        // робота сервісу
     }
 
     WriteEventLog(L"Служба завершила роботу.");
