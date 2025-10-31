@@ -1,42 +1,59 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
+using System.ServiceProcess;
 using System.Threading;
 
-public class Program
+public class MyDaemonCsharp : ServiceBase
 {
-    public static string ServiceName = "MyDaemonCsharp";
-    static void Main(string[] args)
+    private Thread workerThread;
+    public static string ServiceNameConst = "MyDaemonCsharp";
+
+    public MyDaemonCsharp()
     {
-        // Створюємо новий процес фонової служби
-        RunDaemon();
+        this.ServiceName = ServiceNameConst;
+        this.CanStop = true;
+        this.CanPauseAndContinue = false;
+        this.AutoLog = true;
     }
 
-    static void RunDaemon()
+    protected override void OnStart(string[] args)
     {
-        // Перевіряємо чи є необхідні права для запису в журнал
-        if (!EventLog.SourceExists(ServiceName))
+        if (!EventLog.SourceExists(ServiceNameConst))
         {
-            EventLog.CreateEventSource(ServiceName, "Application");
+            EventLog.CreateEventSource(ServiceNameConst, "Application");
         }
 
-        EventLog.WriteEntry(ServiceName, "Демон запущений.", EventLogEntryType.Warning);
+        EventLog.WriteEntry(ServiceNameConst, "Служба запущена.", EventLogEntryType.Information);
 
-        // Основний цикл роботи демона
-        while (true)
+        // Основний цикл в окремому потоці
+        workerThread = new Thread(new ThreadStart(WorkerLoop));
+        workerThread.Start();
+    }
+
+    protected override void OnStop()
+    {
+        EventLog.WriteEntry(ServiceNameConst, "Служба зупиняється.", EventLogEntryType.Information);
+        workerThread?.Interrupt();
+        workerThread?.Join();
+    }
+
+    private void WorkerLoop()
+    {
+        try
         {
-            try
+            while (true)
             {
-                // Чекаємо 10 секунд перед перевіркою стану
-                Thread.Sleep(10000);
-
-                // У реальній ситуації тут можна додати код для обробки команд або подій
-                // Наприклад, можна створити обробник сигналу або події для завершення роботи
-            }
-            catch (ThreadInterruptedException)
-            {
-                EventLog.WriteEntry(ServiceName, "Демон завершив роботу через сигнал.", EventLogEntryType.Information);
-                break; // Вихід із циклу при отриманні сигналу завершення
+                Thread.Sleep(10000); // робота демона
             }
         }
+        catch (ThreadInterruptedException)
+        {
+            EventLog.WriteEntry(ServiceNameConst, "Демон завершив роботу через сигнал.", EventLogEntryType.Information);
+        }
+    }
+
+    public static void Main()
+    {
+        ServiceBase.Run(new MyDaemonCsharp());
     }
 }
-

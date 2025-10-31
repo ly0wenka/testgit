@@ -1,3 +1,4 @@
+version: "3.8"
 
 services:
   postgres:
@@ -16,7 +17,7 @@ services:
       retries: 5
 
   metasploit:
-    image: metasploitframework/metasploit-framework:latest
+    image: metasploitframework/metasploit-framework:6.4.0
     depends_on:
       postgres:
         condition: service_healthy
@@ -25,8 +26,7 @@ services:
     stdin_open: true
     tty: true
     volumes:
-      - ./workspace:/opt/metasploit-framework/.msf4
-    command: msfconsole
+      - ./workspace:/root/.msf4
 
 volumes:
-  pgdata:
+  pgdata: {}
