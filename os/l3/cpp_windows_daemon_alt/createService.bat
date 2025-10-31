@@ -1,2 +1,2 @@
-sc create MyDaemonCppService binPath= "S:\Users\L\Downloads\New folder (175)\testgit\os\l3\cpp_windows_daemon_alt\l3.exe" start= auto
+sc create MyDaemonCppService binPath= "S:\Users\L\Downloads\New folder (175)\testgit\os\l3\cpp_windows_daemon_alt\l3g.exe" start= auto
 sc description MyDaemonCppService "C++ демон для запису подій у Windows Event Log"

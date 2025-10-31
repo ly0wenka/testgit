@@ -67,8 +67,11 @@ void WINAPI ServiceMain(DWORD argc, LPWSTR* argv)
     ServiceStatus.dwCurrentState = SERVICE_STOPPED;
     SetServiceStatus(hStatus, &ServiceStatus);
 }
-
-int wmain()
+#ifdef _MSC_VER
+int wmain()        
+#else
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
+#endif
 {
     SERVICE_TABLE_ENTRY ServiceTable[] =
     {
