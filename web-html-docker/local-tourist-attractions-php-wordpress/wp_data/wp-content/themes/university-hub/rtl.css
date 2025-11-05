@@ -1,0 +1,1052 @@
+/*
+Theme Name: University Hub
+
+Adding support for languages written in a Right To Left (RTL) direction is easy -
+it's just a matter of overwriting all the horizontal positioning attributes
+of your CSS stylesheet in a separate stylesheet file named rtl.css.
+
+https://codex.wordpress.org/Right-to-Left_Language_Support
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Elements
+# Forms
+# Navigation
+# Content
+    ## Posts and pages
+    ## Comments
+# Custom by WEN Themes
+
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+body {
+    direction: rtl;
+    unicode-bidi: embed;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: auto;
+    margin-left: 0.4375em;
+}
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+
+ul,
+ol {
+    margin: 0 3em 1.5em 0;
+}
+
+li > ul,
+li > ol {
+    margin-left: 0;
+    margin-right: 1.5em;
+}
+
+ul,
+ol {
+    margin: 0 1em 0.5em 0;
+}
+
+dd {
+    margin: 0 1.5em 1.5em;
+}
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="date"]{
+    padding: 6px 9px 6px 0;
+}
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+#main-nav {
+    float: right;
+}
+
+.enabled-sticky-primary-menu #main-nav.fixed {
+    left: auto;
+    right: 0;
+}
+
+.main-navigation ul ul {
+    left: auto;
+    right: 0;
+}
+
+.main-navigation ul ul ul {
+    left: auto;
+    right: 105%;
+}
+
+.main-navigation li {
+    float: right;
+}
+
+.main-navigation ul li li:first-child > a {
+    border-left: medium none;
+    border-right: none;
+}
+
+.main-navigation ul ul a {
+    text-align: right;
+}
+
+.main-navigation ul li.menu-item-has-children > a::after,
+.main-navigation ul li.page_item_has_children > a::after {
+    margin-right: 10px;
+    margin-left: 0;
+    left: 10px;
+    right: auto;
+}
+
+.main-navigation ul li.menu-item-has-children a,
+.main-navigation ul li.page_item_has_children a {
+    padding-left: 30px;
+    padding-right: 15px;
+}
+
+.main-navigation ul li.menu-item-has-children .sub-menu a,
+.main-navigation ul li.page_item_has_children .children a {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.main-navigation ul li.menu-item-has-children .sub-menu .menu-item-has-children a,
+.main-navigation ul li.page_item_has_children .children .page_item_has_children a {
+    padding-left: 30px;
+}
+
+.main-navigation ul li.menu-item-has-children .sub-menu .sub-menu a,
+.main-navigation ul li.page_item_has_children .children .children a {
+    padding-left: 0;
+}
+
+.main-navigation ul li.menu-item-has-children .sub-menu .sub-menu .menu-item-has-children a,
+.main-navigation ul li.page_item_has_children .children .children .page_item_has_children a {
+    padding-left: 30px;
+}
+
+.main-navigation ul li.menu-item-has-children .sub-menu .sub-menu .sub-menu a,
+.main-navigation ul li.page_item_has_children .children .children .children a {
+    padding-left: 0;
+}
+
+
+/*comment and post navigation*/
+.meta-nav {
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+.post-navigation .nav-previous a, .post-navigation .nav-next a {
+    padding-left: 0;
+    padding-right: 30px;
+}
+
+/** pagination **/
+.navigation .nav-links .nav-next,
+.navigation .nav-links .nav-next{
+    float: left;
+}
+
+.navigation .nav-links .nav-previous,
+.navigation .nav-links .nav-previous {
+    float: right;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.entry-footer > span {
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+.cat-links > a {
+    margin-right: 5px;
+    margin-left: 0;
+}
+
+.entry-footer > span::before {
+    margin-right: 0;
+    margin-left: 8px;
+}
+
+.entry-meta .byline .author.vcard {
+    margin-right: -4px;
+    margin-left: 0;
+}
+
+.custom-entry-date {
+    float: right;
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+#respond {
+    float: right;
+}
+
+.comment-form-author,
+.comment-form-email,
+.comment-form-url{
+    float: right;
+}
+
+.comment-list li {
+    padding-right: 0;
+}
+
+.comment {
+    float: right;
+}
+
+ol.comment-list .children {
+    float: right;
+    margin: 15px 15px 15px 0;
+}
+
+.comment .comment-body {
+    float: right;
+    text-align: right;
+}
+
+.comment-list .children {
+    border-right: none;
+    border-right: 1px solid rgb(238, 238, 238);
+    margin-right: 0;
+    padding-right: 40px;
+    padding-left: 0;
+}
+
+.comment-list li.comment > div img.avatar {
+    right: 29px;
+}
+
+.vcard .avatar {
+    float: right;
+    margin: 7px 0 15px 15px;
+}
+
+.comment-metadata > a {
+    margin-right: 0;
+    margin-left: 30px;
+}
+
+.authorbox .author-info,
+.authorbox .author-bio-posts-content {
+    float: right;
+}
+
+#commentform input[type="checkbox"],
+#commentform input[type="radio"] {
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+/*--------------------------------------------------------------
+# Custom By WEN Themes
+--------------------------------------------------------------*/
+/*buttons*/
+a.more::after {
+    margin-right: 9px;
+    margin-left: 0;
+}
+
+a.button::after {
+    float: left;
+    margin-right: 5px;
+    margin-left: 0;
+}
+
+a.read-more {
+    margin-right: 10px;
+    margin-left: 0;
+}
+
+.home-section-testimonials .testimonials-content-area p::before {
+    content: "\f10e";
+    margin-left: 20px;
+    margin-right: 0;
+}
+
+/*--------------------------------------------------------------
+##  Header Style By WEN Themes
+--------------------------------------------------------------*/
+a.custom-logo-link {
+    float: right;
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+#header-social {
+    float: left;
+}
+
+#header-social li {
+    float: right;
+}
+
+.header-search-box {
+    float: left;
+}
+
+.header-search-box .search-box-wrap {
+    left: 3%;
+    right: auto;
+}
+
+.search-form input.search-field {
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+.search-form .search-submit {
+    top: 8px;
+    left: 6px;
+    right: auto;
+}
+
+.woocommerce-product-search .search-field {
+    padding: 10px 10px 10px 55px;
+}
+
+.woocommerce-product-search button {
+    left: 0;
+    right: auto;
+}
+
+/* quick contact */
+.quick-news > span {
+    margin-left: 8px;
+    margin-right: 0;
+}
+
+.quick-news {
+    float: right;
+    text-align: right;
+}
+
+#quick-contact {
+    float: left;
+}
+
+#quick-contact li::before {
+    margin-left: 5px;
+    margin-right: 0;
+    right: 5px;
+    left: auto;
+}
+
+#quick-contact li {
+    float: right;
+    padding: 0 0 0 5px;
+    text-align: right;
+    padding-right: 50px;
+    padding-left: 0;
+    margin-right: 20px;
+    margin-left: 0;
+}
+
+.top-news {
+    float: right;
+}
+
+.top-news-title {
+    float: right;
+    margin-left: 0;
+    margin-right: -500px;
+    padding: 8px 500px 9px 6px;
+}
+
+.top-news-title::after {
+    border-right: 16px solid #ff6000;
+    border-left: none;
+    float: left;
+    left: -16px;
+    right: auto;
+}
+
+.main-navigation ul li li.menu-item-has-children > a::after,
+.main-navigation ul li li.page_item_has_children > a::after,
+.sidebar ul li::before,
+#breadcrumb .breadcrumb-trail li::after,
+a.button::after,
+a.more::after {
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Safari prior 9.0 */
+    transform: rotate(180deg); /* Standard syntax */
+}
+
+#news-ticker {
+    float: right;
+    margin: 9px 20px 6px 0;
+}
+
+.site-header.fixed {
+    right: 0;
+    left: auto;
+}
+
+#site-identity {
+    float: right;
+    margin-left: 15px;
+    margin-right: 0;
+    text-align: right;
+}
+
+.site-branding {
+    float: right;
+}
+
+/*Top Header*/
+#tophead {
+    float: right;
+}
+
+.header-social {
+    float: left;
+}
+
+#top-nav {
+    float: left;
+}
+
+#top-nav ul ul {
+    right: 0;
+    left: auto;
+    padding: 5px 20px 0;
+}
+
+#top-nav ul ul ul {
+    right: 100%;
+    left: auto;
+}
+
+#top-nav li {
+    float: right;
+    padding-right: 5px;
+    padding-left: 0;
+}
+
+#top-nav li:first-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+    border-left: none;
+}
+
+#top-nav li li {
+    float: right;
+}
+
+#top-nav ul li li:first-child > a {
+    border-right: none;
+}
+
+#top-nav ul ul a {
+    text-align: right;
+    border-right: none;
+    border-left: none;
+}
+
+#top-nav ul li.menu-item-has-children > a::after,
+#top-nav ul li.page_item_has_children > a::after {
+    margin-right: 10px;
+    margin-left: 0;
+    left: 10px;
+    right: auto;
+}
+
+#top-nav ul li.menu-item-has-children a,
+#top-nav ul li.page_item_has_children a {
+    padding-left: 30px;
+    padding-right: 0;
+}
+
+/*--------------------------------------------------------------
+## Social Links Style By WEN Themes
+--------------------------------------------------------------*/
+.university_hub_widget_social li a {
+    margin-left: 0;
+}
+
+.university_hub_widget_social li {
+    margin-left: 5px;
+}
+
+/*--------------------------------------------------------------
+## Main slider Style By WEN Themes
+--------------------------------------------------------------*/
+#main-slider::before {
+    right: 0;
+    left: auto;
+}
+
+#main-slider::after {
+    right: 0;
+    left: auto;
+}
+
+#main-slider .cycle-caption {
+    text-align: right;
+}
+
+#main-slider .cycle-caption .caption-wrap {
+    float: right;
+}
+
+.slider-buttons a {
+    margin: 0 0 0 20px;
+}
+
+.custom-button::after {
+    margin-right: 7px;
+}
+
+/*--------------------------------------------------------------
+## Main Content Style By WEN Themes
+--------------------------------------------------------------*/
+#primary {
+    float: right;
+}
+
+/*--------------------------------------------------------------
+## Sidebar Style By WEN Themes
+--------------------------------------------------------------*/
+.sidebar {
+    float: right;
+}
+
+#sidebar-primary {
+    float: left;
+}
+
+#sidebar-secondary {
+    float: right;
+}
+
+.sidebar ul {
+    list-style: outside none none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding-right: 12px;
+    padding-left: 0;
+}
+
+.sidebar ul li::before {
+    right: 0;
+    left: auto;
+}
+
+/*--------------------------------------------------------------
+## Footer Style By WEN Themes
+--------------------------------------------------------------*/
+#footer-widgets ul li {
+    padding: 3px 13px 3px 15px;
+}
+#footer-widgets ul li::before {
+    right: 0;
+    left: auto;
+}
+
+#footer-widgets a .footer-widget-area {
+    float: right;
+}
+
+#footer-widgets .footer-widget-area  {
+    float: right;
+}
+
+/*Scrollup Style*/
+.scrollup {
+    float: left;
+    left: 32px;
+    right: auto;
+}
+
+/*--------------------------------------------------------------
+##  layout sidebar By WEN Themes
+--------------------------------------------------------------*/
+.global-layout-left-sidebar #primary {
+    float: left;
+}
+
+.global-layout-three-columns .sidebar{
+    float: left;
+}
+
+/*--------------------------------------------------------------
+## Inner Pages Style By WEN Themes
+--------------------------------------------------------------*/
+/*Basic Breadcrumb */
+#breadcrumb .breadcrumb-trail li {
+    float: right;
+    padding-left: 10px;
+    padding-right: 0;
+}
+
+#breadcrumb .breadcrumb-trail li::after {
+    float: left;
+    margin-right: 10px;
+    margin-left: 0;
+}
+
+/*--------------------------------------------------------------
+## Extra css for Pro By WEN Themes
+--------------------------------------------------------------*/
+/* Global layout sidebar By WEN Themes*/
+.global-layout-three-columns-pcs #sidebar-primary,
+.global-layout-three-columns-cps #sidebar-primary,
+.global-layout-three-columns-psc #sidebar-primary {
+    float: right;
+}
+
+.global-layout-three-columns-pcs #sidebar-secondary,
+.global-layout-three-columns-cps #sidebar-secondary {
+    float: left;
+}
+
+.global-layout-three-columns-cps #primary {
+    float: right;
+}
+
+/* equal global layout*/
+.global-layout-three-columns-pcs-equal #sidebar-primary {
+    float: right;
+}
+
+.global-layout-three-columns-pcs-equal #sidebar-secondary {
+    float: left;
+}
+
+/*--------------------------------------------------------------
+## Home Section
+--------------------------------------------------------------*/
+#front-page-home-sections .section-title,
+#university-hub-front-page-widgets .widget-title {
+    border-right: 4px solid #ff6000;
+    border-left: none;
+    padding-right: 15px;
+    padding-left: 0;
+}
+
+/*--------------------------------------------------------------
+## service section css By WEN Themes
+--------------------------------------------------------------*/
+.home-section-services .services-item {
+    float: right;
+}
+
+/*--------------------------------------------------------------
+### Latest News post section style By WEN Themes
+--------------------------------------------------------------*/
+.home-section-latest-news .latest-news-item {
+    float: right;
+}
+
+.home-section-latest-news .latest-news-layout-2 .latest-news-text-wrap {
+    padding: 20px 20px 20px 10px;
+    float: right;
+}
+
+.home-section-latest-news .latest-news-layout-2 .latest-news-thumb {
+    float: right;
+}
+
+.home-section-latest-news .latest-news-meta > span::before,
+.home-section-news-and-events .block-meta span::before{
+    margin-left: 4px;
+    margin-right: 0;
+}
+
+.home-section-latest-news .latest-news-meta > span {
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+.home-section-latest-news .latest-news-meta.byline .author.vcard {
+    margin-right: -4px;
+    margin-left: 0;
+}
+
+/*--------------------------------------------------------------
+## call to action style By WEN Themes
+--------------------------------------------------------------*/
+.home-section-call-to-action .cta-buttons {
+    float: left;
+}
+
+.home-section-call-to-action .cta-content {
+    float: right;
+    text-align: right;
+}
+
+#front-page-home-sections .home-section-call-to-action .section-title {
+    text-align: right;
+}
+
+/*--------------------------------------------------------------
+### Recent post widget style By WEN Themes
+--------------------------------------------------------------*/
+.university_hub_widget_recent_posts .recent-posts-date::before{
+    margin-left: 8px;
+    margin-right: 0;
+}
+
+/*--------------------------------------------------------------
+### Featured Page Widget style By WEN Themes
+--------------------------------------------------------------*/
+#university-hub-front-page-widgets .featured-page-widget img.alignleft {
+    margin-left: 60px;
+    margin-right: 0;
+}
+
+#university-hub-front-page-widgets .featured-page-widget img.alignright {
+    margin-right: 60px;
+    margin-left: 0;
+}
+
+/*--------------------------------------------------------------
+### Featured News Events section style By WEN Themes
+--------------------------------------------------------------*/
+.home-section-news-and-events .block-meta span {
+    margin-left: 15px;
+    margin-right: 0;
+}
+
+.home-section-news-and-events h2::before {
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+.home-section-news-and-events h3 {
+    padding-left: 5px;
+    padding-right: 0;
+}
+
+.home-section-news-and-events .recent-news {
+    float: right;
+}
+
+.home-section-news-and-events .recent-events {
+    float: right;
+    float: left;
+}
+
+.home-section-news-and-events .news-post {
+    float: right;
+}
+
+.home-section-news-and-events .event-post .entry-meta {
+    float: right;
+    margin: 10px 0 10px 20px;
+}
+
+.home-section-news-and-events .event-post .entry-meta::before {
+    right: 24px;
+}
+
+.home-section-news-and-events .event-post .entry-meta::after {
+    right: 0;
+    left: auto;
+}
+
+.home-section-news-and-events .custom-entry-date {
+    float: right;
+    margin-left: 15px;
+    margin-right: 0;
+}
+
+/*Bio Auther box*/
+.authorbox .author-avatar {
+    float: right;
+    margin: 5px 0 10px 15px;
+}
+
+.authorbox.no-author-avatar .author-info {
+    margin-right: 0;
+}
+
+/*--------------------------------------------------------------
+##  Media Queries By WEN Themes
+--------------------------------------------------------------*/
+
+
+/* Smaller than standard 1139 (devices and browsers) */
+@media only screen and (max-width:1300px) {
+    .comments-area form#commentform p {
+        float: right;
+    }
+    #main-slider .cycle-caption {
+        right: 15px;
+        left: auto;
+    }
+
+    .authorbox  .author-info,
+    .authorbox  .author-bio-posts-content {
+        float: right;
+    }
+
+    #main-slider .cycle-prev {
+        left: 70px;
+        right: auto;
+    }
+
+    #main-slider .cycle-next {
+        left: 30px;
+        right: auto;
+    }
+
+    .home-section-call-to-action .cta-btn {
+        float: left;
+    }
+
+    #university-hub-front-page-widgets .featured-page-widget img.alignleft {
+        margin-left: 30px;
+    }
+}
+
+/* Smaller than standard 1024 (devices and browsers) */
+@media only screen and (max-width:1023px) {
+    #main-slider .cycle-next {
+        left: 25px;
+        right: auto;
+    }
+
+    .widget-area .home-section-latest-news .latest-news-meta li {
+        margin-left: 0;
+    }
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width:1000px) {
+    .site-branding {
+        float: none;
+    }
+    #site-identity {
+        text-align: center;
+    }
+    .university_hub_widget_recent_posts .recent-posts-item {
+        float: right;
+    }
+
+    .top-news {
+        float: right;
+    }
+
+    #quick-contact li {
+        margin-right: 8px;
+        margin-left: 0;
+        padding: 0 35px 0 5px;
+    }
+
+    .home-section-call-to-action .cta-btn {
+        float: left;
+        margin: 15px 5px 0;
+    }
+
+    .home-section-news-and-events .recent-news {
+        padding: 0 15px 30px;
+    }
+
+    #university-hub-front-page-widgets .featured-page-widget img.alignleft {
+        margin-left: 0;
+    }
+
+    .university-hub-woocommerce-product-grid-4 ul.products li.product .button {
+        right: 13%;
+        left: auto;
+    }
+
+    .university-hub-woocommerce-product-grid-3 ul.products li.product .button {
+        right: 16%;
+        left: auto;
+    }
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width:767px) {
+    /*footer widget area*/
+    #footer-widgets .footer-widget-area {
+        float: right;
+    }
+
+    .university-hub-woocommerce-product-grid-4 ul.products li.product .button,
+    .university-hub-woocommerce-product-grid-3 ul.products li.product .button {
+        right: 22%;
+        left: auto;
+    }
+
+    .home-section-testimonials .cycle-slide > img {
+        margin-left: 15px;
+    }
+
+    .home-section-team .teams-col-4 .team-item,
+    .home-section-team .teams-col-3 .team-item,
+    .home-section-team .teams-col-2 .team-item,
+    .home-section-team .teams-col-1 .team-item {
+        float: right;
+    }
+
+    #colophon .colophon-column {
+        float: right;
+    }
+
+    .entry-footer > span {
+        border-left: medium none;
+        float: right;
+    }
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width:640px) {
+    #header-social,
+    #header-social li {
+        float: none;
+    }
+    a.custom-logo-link {
+        float: right;
+        margin-left: 0;
+    }
+
+    #site-identity {
+        margin-left: 0;
+    }
+    #quick-contact {
+        float: none;
+    }
+
+    #quick-contact li {
+        display: inline-block;
+        float: none;
+        padding: 0 48px 0 5px;
+    }
+
+    .top-news {
+        float: right;
+    }
+
+    #header-social li:last-child {
+        border-left: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .home-section-news-and-events .event-post {
+        padding-left: 10px;
+    }
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width:479px) {
+    #quick-contact li::before {
+        right: -4px;
+        left: auto;
+    }
+
+    #quick-contact li {
+        padding: 0 19px 0 0;
+    }
+
+    .home-section-latest-news .latest-news-item.news-featured .latest-news-thumb {
+        margin-left: 0;
+    }
+
+    .social-links {
+        float: left;
+        text-align: left;
+    }
+
+    .home-section-testimonials .testimonial-content-area {
+        float: right;
+    }
+
+    #main-slider .cycle-caption {
+        right: 0;
+        left: auto;
+    }
+
+    .slider-buttons a {
+        margin-left: 10px;
+    }
+
+    #university-hub-front-page-widgets .fetured-page-content {
+        text-align: right;
+    }
+
+    #university-hub-front-page-widgets .fetured-page-content .widget-title {
+        text-align: right;
+    }
+
+    #main-slider .cycle-prev {
+        left: 55px;
+    }
+
+    .sidr-main-open a#mobile-trigger2 {
+        float: right;
+        padding-right: 260px;
+    }
+
+    .sidr-main-open a#mobile-trigger {
+        float: left;
+        padding-right: 260px;
+    }
+
+    .sidr2-open a#mobile-trigger {
+        float: right;
+        padding-right: 5px;
+    }
+
+    .sidr2-open  a#mobile-trigger2 {
+        padding-left: 267px;
+    }
+}
+
+/*** Block Styles ***/
+[class^="wp-block-"]:not(.wp-block-gallery) figcaption {
+    text-align: right;
+}
+
+.wp-block-image figure.alignleft {
+    margin-left: 1.5em;
+}
+
+.wp-block-image figure.alignright {
+    margin-right: 1.5em;
+}
+
+.wp-block-quote:not(.is-large):not(.is-style-large),
+blockquote {
+    padding-right: 20px;
+    padding-left: 0;
+}
+
+.wp-block-quote:not(.is-large):not(.is-style-large),
+blockquote {
+    border-right: 5px solid #179bd7;
+    border-left: none;
+}
+
+.entry-content ul,.entry-content ol {
+    padding-right: 20px;
+}

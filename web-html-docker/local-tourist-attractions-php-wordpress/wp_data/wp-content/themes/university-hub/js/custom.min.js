@@ -1,0 +1,1 @@
+jQuery(document).ready(function(e){var n=e("#news-ticker"),o=(0<n.length&&n.easyTicker({direction:"up",easing:"swing",speed:"slow",interval:3e3,height:"auto",visible:1,mousePause:1}),e("#btn-scrollup"));e(window).on("scroll",function(){100<e(this).scrollTop()?o.fadeIn():o.fadeOut()}),o.on("click",function(){return e("html, body").animate({scrollTop:0},600),!1})});

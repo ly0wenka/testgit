@@ -1,0 +1,1028 @@
+# Translation of Themes - University Hub in Ukrainian
+# This file is distributed under the same license as the Themes - University Hub package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-11-19 09:36:10+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: uk_UA\n"
+"Project-Id-Version: Themes - University Hub\n"
+
+#. Description of the theme
+#: style.css
+#, gp-priority: high
+msgid "University Hub, an Education theme by WEN Themes, is a responsive WordPress theme for university, school, college or other educational institutions. Along with educational institutions, University Hub is flexible and loaded with several features to also cater to the needs of design agencies, corporate websites and small businesses. Official Support Forum: https://themepalace.com/support-forum/ Full Demo: https://wenthemes.com/theme-demos/?demo=university-hub"
+msgstr "University Hub, освітня тема від WEN Themes - це адаптивна тема WordPress для університету, школи, коледжу чи інших закладів освіти. Поряд з освітніми установами, University Hub є також гнучкою і наповненою певним функціоналом темою для потреб дизайнерських агенцій, корпоративних сайтів та малого бізнесу. Офіціальний форум підтримки: http://themepalace.com/support-forum/ Повна демонстрація: http://wenthemes.com/theme-demos/?demo=university-hub"
+
+#. Theme Name of the theme
+#: style.css
+#, gp-priority: high
+msgid "University Hub"
+msgstr "University Hub"
+
+#: functions.php:159
+msgid "Yellow"
+msgstr "Жовтий"
+
+#: functions.php:154
+msgid "Red"
+msgstr "Червоний"
+
+#: functions.php:149
+msgid "Green"
+msgstr "Зелений"
+
+#: functions.php:144
+msgid "Orange"
+msgstr "Помаранчевий"
+
+#: functions.php:139
+msgid "Light Blue"
+msgstr "Світло-блакитний"
+
+#: functions.php:134
+msgid "Navy Blue"
+msgstr "Темно-блакитний"
+
+#: functions.php:129
+msgid "Blue"
+msgstr "Блакитний"
+
+#: functions.php:124
+msgid "Gray"
+msgstr "Сірий"
+
+#: functions.php:119
+msgid "White"
+msgstr "Білий"
+
+#: functions.php:114
+msgid "Black"
+msgstr "Чорний"
+
+#: functions.php:102
+msgid "XL"
+msgstr "XL"
+
+#: functions.php:101
+msgid "Huge"
+msgstr "Великий"
+
+#: functions.php:96
+msgid "L"
+msgstr "L"
+
+#: functions.php:90
+msgid "M"
+msgstr "M"
+
+#: functions.php:89
+msgid "Normal"
+msgstr "Звичайний"
+
+#: functions.php:84
+msgid "S"
+msgstr "S"
+
+#: functions.php:83
+msgid "Small"
+msgstr "Маленький"
+
+#: inc/hook/custom.php:421
+msgid "Scroll Up"
+msgstr "Прокрутка вгору"
+
+#: functions.php:235
+msgid "collapse child menu"
+msgstr "згорнути підменю"
+
+#: functions.php:234
+msgid "expand child menu"
+msgstr "розгорнути дочірнє меню"
+
+#: inc/hook/custom.php:85
+msgid "Menu"
+msgstr "Меню"
+
+#: inc/customizer.php:61
+msgid "Buy Pro"
+msgstr "Придбати Pro"
+
+#: inc/customizer.php:60
+msgid "University Hub Pro"
+msgstr "University Hub Pro"
+
+#: template-parts/home/news-and-events.php:50
+msgctxt "date format"
+msgid "F d, Y"
+msgstr "F d, Y"
+
+#: template-parts/home/latest-news.php:58
+#: template-parts/home/news-and-events.php:53
+msgid "0 comments"
+msgstr "0 коментарів"
+
+#: template-parts/home/latest-news.php:54
+msgctxt "date format"
+msgid "j M Y"
+msgstr "d.m.Y"
+
+#. translators: %s: Name of current post.
+#: template-parts/content.php:37
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Продовжити читання %s <span class=\"meta-nav\">&rarr;</span>"
+
+#: template-parts/content-page.php:31 template-parts/content-single.php:34
+#: template-parts/content.php:43
+msgid "Pages:"
+msgstr "Сторінки:"
+
+#: template-parts/content-none.php:29
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Схоже, що не вдалося знайти те, що ви шукаєте. Можливо допоможе пошук."
+
+#: template-parts/content-none.php:24
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "На жаль, за вашим запитом нічого не знайдено. Спробуйте інші ключові слова."
+
+#: template-parts/content-none.php:20
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Готові опублікувати свій перший запис? <a href=\"%1$s\">Розпочніть тут</a>."
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr "Нічого не знайдено"
+
+#: single.php:26
+msgid "Previous post:"
+msgstr "Попередній запис:"
+
+#: inc/hook/slider.php:187 single.php:25
+msgid "Previous"
+msgstr "Попередній"
+
+#: single.php:23
+msgid "Next post:"
+msgstr "Наступний запис:"
+
+#: inc/hook/slider.php:188 single.php:22
+msgid "Next"
+msgstr "Далі"
+
+#: searchform.php:5
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "Пошук &hellip;"
+
+#: searchform.php:4
+msgctxt "label"
+msgid "Search for:"
+msgstr "Пошук:"
+
+#: search.php:18
+msgid "Search Results for: %s"
+msgstr "Результати за пошуком: %s"
+
+#: lib/widget-base/class-widget-base.php:292
+msgctxt "remove button"
+msgid "X"
+msgstr "X"
+
+#: lib/widget-base/class-widget-base.php:281
+msgid "Choose Image"
+msgstr "Оберіть зображення"
+
+#: lib/widget-base/class-widget-base.php:281
+msgid "Select Image"
+msgstr "Виберіть зображення"
+
+#: lib/widget-base/class-widget-base.php:281
+msgid "Upload"
+msgstr "Завантажити"
+
+#: lib/breadcrumbs/breadcrumbs.php:788
+msgctxt "weekly archives date format"
+msgid "W"
+msgstr "W"
+
+#: lib/breadcrumbs/breadcrumbs.php:760 lib/breadcrumbs/breadcrumbs.php:1190
+msgctxt "daily archives date format"
+msgid "j"
+msgstr "j"
+
+#: lib/breadcrumbs/breadcrumbs.php:759 lib/breadcrumbs/breadcrumbs.php:815
+#: lib/breadcrumbs/breadcrumbs.php:1186
+msgctxt "monthly archives date format"
+msgid "F"
+msgstr "F"
+
+#: lib/breadcrumbs/breadcrumbs.php:758 lib/breadcrumbs/breadcrumbs.php:787
+#: lib/breadcrumbs/breadcrumbs.php:814 lib/breadcrumbs/breadcrumbs.php:841
+#: lib/breadcrumbs/breadcrumbs.php:1182
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: lib/breadcrumbs/breadcrumbs.php:742
+msgctxt "hour archives time format"
+msgid "g a"
+msgstr "H"
+
+#: lib/breadcrumbs/breadcrumbs.php:725
+msgctxt "minute archives time format"
+msgid "i"
+msgstr "i"
+
+#: lib/breadcrumbs/breadcrumbs.php:708
+msgctxt "minute and hour archives time format"
+msgid "g:i a"
+msgstr "H:i"
+
+#. Translators: Weekly archive title. %s is the week date format.
+#: lib/breadcrumbs/breadcrumbs.php:256
+msgid "Week %s"
+msgstr "Тиждень %s"
+
+#. Translators: Minute archive title. %s is the minute time format.
+#: lib/breadcrumbs/breadcrumbs.php:254
+msgid "Minute %s"
+msgstr "Хвилина %s"
+
+#. Translators: %s is the page number.
+#: lib/breadcrumbs/breadcrumbs.php:252
+msgid "Page %s"
+msgstr "Сторінка %s"
+
+#. Translators: %s is the search query. The HTML entities are opening and
+#. closing curly quotes.
+#: lib/breadcrumbs/breadcrumbs.php:250
+msgid "Search results for &#8220;%s&#8221;"
+msgstr "Результати за пошуком &#8220;%s&#8221;"
+
+#: lib/breadcrumbs/breadcrumbs.php:248
+msgid "Archives"
+msgstr "Архіви"
+
+#: lib/breadcrumbs/breadcrumbs.php:247
+msgid "404 Not Found"
+msgstr "404 Не знайдено"
+
+#: lib/breadcrumbs/breadcrumbs.php:245
+msgctxt "breadcrumbs aria label"
+msgid "Breadcrumbs"
+msgstr "Навігаційні стежки"
+
+#: lib/breadcrumbs/breadcrumbs.php:244
+msgid "Browse:"
+msgstr "Перегляд:"
+
+#: inc/widgets.php:330
+msgid "UH: Recent Posts"
+msgstr "UH: Останні записи"
+
+#: inc/widgets.php:324
+msgid "Disable Date"
+msgstr "Вимкнути дату"
+
+#: inc/widgets.php:316
+msgid "px"
+msgstr "px"
+
+#: inc/widgets.php:314
+msgid "Image Width:"
+msgstr "Ширина зображення:"
+
+#: inc/widgets.php:300
+msgid "Number of Posts:"
+msgstr "Кількість записів:"
+
+#: inc/widgets.php:297
+msgid "All Categories"
+msgstr "Усі категорії"
+
+#: inc/widgets.php:295
+msgid "Select Category:"
+msgstr "Виберіть категорію:"
+
+#: inc/widgets.php:285
+msgid "Displays recent posts."
+msgstr "Відображає останні записи."
+
+#: inc/widgets.php:188
+msgid "UH: Featured Page"
+msgstr "UH: Вибрана сторінка"
+
+#: inc/widgets.php:181
+msgid "Image Alignment:"
+msgstr "Вирівнювання зображення:"
+
+#: inc/widgets.php:176 inc/widgets.php:308
+msgid "Featured Image:"
+msgstr "Головне зображення:"
+
+#: inc/widgets.php:168
+msgid "Applies when Excerpt is selected in Content option."
+msgstr "Застосовується, коли Фрагмент активований в опціях вмісту."
+
+#: inc/widgets.php:167
+msgid "Excerpt Length:"
+msgstr "Довжина уривка:"
+
+#: inc/widgets.php:163
+msgid "Full"
+msgstr "Повний"
+
+#: inc/widgets.php:162
+msgid "Excerpt"
+msgstr "Уривок"
+
+#: inc/widgets.php:158
+msgid "Show Content:"
+msgstr "Показати вміст:"
+
+#: inc/widgets.php:153
+msgid "Eg: 1234"
+msgstr "Напр.: 1234"
+
+#: inc/widgets.php:152
+msgid "Post ID:"
+msgstr "ID запису:"
+
+#: inc/widgets.php:148
+msgctxt "message"
+msgid "OR"
+msgstr "АБО"
+
+#: inc/widgets.php:143
+msgid "Select Page:"
+msgstr "Вибрати сторінку:"
+
+#: inc/widgets.php:138
+msgid "Use Page/Post Title as Widget Title"
+msgstr "Використати заголовок запису/сторінки для заголовку віджета"
+
+#: inc/widgets.php:128
+msgid "Displays single featured Page or Post."
+msgstr "Відображає одну вибрану сторінку. або запис."
+
+#: inc/widgets.php:72
+msgid "UH: Social"
+msgstr "UH: Соціальні кнопки"
+
+#: inc/widgets.php:66
+msgid "Social menu is not set. Please create menu and assign it to Social Menu."
+msgstr "Соціальне меню не встановлено. Будь ласка, створіть меню і назначте його Соціальним меню."
+
+#: inc/widgets.php:58 inc/widgets.php:133 inc/widgets.php:290
+msgid "Title:"
+msgstr "Заголовок:"
+
+#: inc/widgets.php:53
+msgid "Displays social icons."
+msgstr "Відображає іконки соцмереж. "
+
+#: inc/template-tags.php:95 template-parts/home/news-and-events.php:96
+msgctxt "date format"
+msgid "d"
+msgstr "d"
+
+#: inc/template-tags.php:94 template-parts/home/news-and-events.php:95
+msgctxt "date format"
+msgid "M"
+msgstr "M"
+
+#: inc/template-tags.php:82 template-parts/content-page.php:39
+msgid "Edit"
+msgstr "Редагувати"
+
+#. Translators: used between list items, there is a space after the comma.
+#: inc/template-tags.php:67 inc/template-tags.php:75
+msgid ", "
+msgstr ", "
+
+#: inc/template-tags.php:57 template-parts/home/latest-news.php:58
+#: template-parts/home/news-and-events.php:53
+msgid "% Comments"
+msgstr "% коментарів"
+
+#: inc/template-tags.php:57 template-parts/home/latest-news.php:58
+#: template-parts/home/news-and-events.php:53
+msgid "1 Comment"
+msgstr "1 коментар"
+
+#: inc/template-tags.php:57
+msgid "Leave a comment"
+msgstr "Залишити коментар"
+
+#: inc/support/footer-widgets.php:109
+msgid "Footer Widget %d"
+msgstr "Віджет підвалу %d"
+
+#: inc/metabox.php:80
+msgid "Image Settings"
+msgstr "Налаштування зображення"
+
+#: inc/metabox.php:64
+msgid "Single Layout"
+msgstr "Одиночний шаблон"
+
+#: inc/metabox.php:62
+msgid "Layout Settings"
+msgstr "Налаштування компонування"
+
+#: inc/metabox.php:59
+msgid "Image"
+msgstr "Зображення"
+
+#: inc/metabox.php:22
+msgid "Theme Settings"
+msgstr "Налаштування теми"
+
+#: inc/hook/custom.php:214
+msgid "University Hub by %s"
+msgstr "University Hub від %s"
+
+#: inc/hook/custom.php:17
+msgid "Skip to content"
+msgstr "Перейти до вмісту"
+
+#: inc/hook/basic.php:170
+msgid "Slider Image"
+msgstr "Зображення слайдеру"
+
+#: inc/hook/basic.php:169
+msgid "Recommended Image Sizes"
+msgstr "Рекомендовані розміри зображень"
+
+#: inc/helper/options.php:243
+msgid "Featured Pages"
+msgstr "Вибрані сторінки"
+
+#: inc/helper/options.php:218
+msgid "Static Front Page Only"
+msgstr "Тільки на статичній головній сторінці"
+
+#: inc/helper/options.php:192
+msgctxt "transition effect"
+msgid "scrollHorz"
+msgstr "горизонтальна прокрутка"
+
+#: inc/helper/options.php:191
+msgctxt "transition effect"
+msgid "none"
+msgstr "немає"
+
+#: inc/helper/options.php:190
+msgctxt "transition effect"
+msgid "fadeout"
+msgstr "згасання"
+
+#: inc/helper/options.php:189
+msgctxt "transition effect"
+msgid "fade"
+msgstr "зникнення"
+
+#: inc/helper/options.php:169
+msgctxt "alignment"
+msgid "Right"
+msgstr "Справа"
+
+#: inc/helper/options.php:168
+msgctxt "alignment"
+msgid "Center"
+msgstr "Центр"
+
+#: inc/helper/options.php:167
+msgctxt "alignment"
+msgid "Left"
+msgstr "Зліва"
+
+#: inc/helper/options.php:166
+msgctxt "alignment"
+msgid "None"
+msgstr "Немає"
+
+#: inc/helper/options.php:122
+msgid "Full (original)"
+msgstr "Повний (оригінал)"
+
+#: functions.php:95 inc/helper/options.php:121
+msgid "Large"
+msgstr "Великий"
+
+#: inc/helper/options.php:120
+msgid "Medium"
+msgstr "Середній"
+
+#: inc/helper/options.php:119
+msgid "Thumbnail"
+msgstr "Мініатюра"
+
+#: inc/helper/options.php:117
+msgid "No Image"
+msgstr "Немає зображення"
+
+#: inc/helper/options.php:88
+msgid "Post Excerpt"
+msgstr "Уривок запису"
+
+#: inc/helper/options.php:87
+msgid "Full Post"
+msgstr "Повний запис"
+
+#: inc/helper/options.php:67
+msgid "Advanced"
+msgstr "Додатково"
+
+#: inc/helper/options.php:66
+msgid "Simple"
+msgstr "Простий"
+
+#: inc/helper/options.php:65 inc/helper/options.php:219
+msgid "Disabled"
+msgstr "Вимкнено"
+
+#: inc/helper/options.php:45
+msgid "Numeric"
+msgstr "Нумерований"
+
+#: inc/helper/options.php:44
+msgid "Default (Older / Newer Post)"
+msgstr "Типово (Старіший / Новіший запис)"
+
+#: inc/helper/options.php:23
+msgid "No Sidebar"
+msgstr "Без бічної колонки"
+
+#: inc/helper/options.php:22
+msgid "Three Columns"
+msgstr "Три колонки"
+
+#: inc/helper/options.php:21
+msgid "Content - Primary Sidebar"
+msgstr "Вміст - Головна бічна панель"
+
+#: inc/helper/options.php:20
+msgid "Primary Sidebar - Content"
+msgstr "Головна бічна панель - Вміст"
+
+#: inc/helper/common.php:261
+msgid "Default"
+msgstr "За замовчуванням"
+
+#: inc/helper/common.php:141 lib/breadcrumbs/breadcrumbs.php:246
+msgid "Home"
+msgstr "Головна"
+
+#. translators: If there are characters in your language that are not supported
+#. by Roboto, translate this to 'off'. Do not translate into your own language.
+#: inc/helper/common.php:86
+msgctxt "Roboto font: on or off"
+msgid "on"
+msgstr "on"
+
+#: inc/customizer.php:52
+msgid "Note: Background Color is applicable only if no image is set as Background Image."
+msgstr "Нотатка: Фоновий колір застосовується лише якщо не встановлено фонове зображення."
+
+#: inc/customizer/slider.php:249
+msgid "Enable Autoplay"
+msgstr "Увімкнути автовідтворення"
+
+#: inc/customizer/slider.php:233
+msgid "Enable Pager"
+msgstr "Увімкнути номери слайдів"
+
+#: inc/customizer/slider.php:217
+msgid "Enable Arrow"
+msgstr "Увімкнути стрілку"
+
+#: inc/customizer/slider.php:201
+msgid "Enable Caption"
+msgstr "Увімкнути підпис"
+
+#: inc/customizer/slider.php:183
+msgid "Transition Duration"
+msgstr "Тривалість переходу"
+
+#: inc/customizer/slider.php:166 inc/customizer/slider.php:184
+msgid "in seconds"
+msgstr "В секундах"
+
+#: inc/customizer/slider.php:165
+msgid "Transition Delay"
+msgstr "Затримка переходу"
+
+#: inc/customizer/slider.php:148
+msgid "Transition Effect"
+msgstr "Ефект переходу"
+
+#: inc/customizer/slider.php:131
+msgid "Slider Options"
+msgstr "Параметри слайдеру"
+
+#: inc/customizer/slider.php:99
+msgid "Featured Page"
+msgstr "Вибрана сторінка"
+
+#: inc/customizer/slider.php:77
+msgid "Enter number between 1 and 20. Save and refresh the page if No of Slides is changed."
+msgstr "Введіть число від 1 до 20. Збережіть і оновіть сторінку, якщо Кількість слайдів змінилася."
+
+#: inc/customizer/slider.php:76
+msgid "No of slides"
+msgstr "Кількість слайдів"
+
+#: inc/customizer/slider.php:56
+msgid "Select Slider Type"
+msgstr "Виберіть тип слайдеру"
+
+#: inc/customizer/slider.php:39
+msgid "Enable Slider On"
+msgstr "Увімкнути слайдер на"
+
+#: inc/customizer/slider.php:22
+msgid "Slider Type"
+msgstr "Тип слайдеру"
+
+#: inc/customizer/slider.php:13
+msgid "Featured Slider"
+msgstr "Головний слайдер"
+
+#: inc/customizer/option.php:519
+msgid "Advanced: Requires %1$sBreadcrumb NavXT%2$s plugin"
+msgstr "Додатково: Вимагається плагін %1$sBreadcrumb NavXT%2$s"
+
+#: inc/customizer/option.php:518
+msgid "Breadcrumb Type"
+msgstr "Тип навігаційної стежки"
+
+#: inc/customizer/option.php:501
+msgid "Breadcrumb Options"
+msgstr "Параметри навігаційної стежки"
+
+#: inc/customizer/option.php:491
+msgid "Enter category ID to exclude in Blog Page. Separate with comma if more than one"
+msgstr "Введіть ідентифікатор категорії. щоб виключити її зі сторінки блогу. Розділяйте комою, якщо категорій декілька"
+
+#: inc/customizer/option.php:490
+msgid "Exclude Categories in Blog"
+msgstr "Виключити категорії в блозі"
+
+#: inc/customizer/option.php:473 inc/customizer/slider.php:119
+msgid "Read More Text"
+msgstr "Текст \"Читати далі\""
+
+#: inc/customizer/option.php:437
+msgid "Blog Options"
+msgstr "Параметри блогу"
+
+#: inc/customizer/option.php:410
+msgid "Copyright Text"
+msgstr "Текст копірайту"
+
+#: inc/customizer/option.php:392
+msgid "Footer Options"
+msgstr "Параметри підвалу"
+
+#: inc/customizer/option.php:381
+msgid "Pagination Type"
+msgstr "Тип пагінації"
+
+#: inc/customizer/option.php:364
+msgid "Pagination Options"
+msgstr "Параметри пагінації"
+
+#: inc/customizer/option.php:354
+msgid "Check this to show page content in Home page."
+msgstr "Увімкніть це для відображення особливого вмісту на головній сторінці."
+
+#: inc/customizer/option.php:353
+msgid "Show Home Content"
+msgstr "Показати вміст домашній сторінки"
+
+#: inc/customizer/option.php:337
+msgid "Home Page Options"
+msgstr "Параметри головної сторінки"
+
+#: inc/customizer/option.php:326 inc/metabox.php:82
+msgid "Image in Single Post/Page"
+msgstr "Зображення в окремому записі/сторінці"
+
+#: inc/customizer/option.php:308
+msgid "Image Alignment in Archive"
+msgstr "Вирівнювання зображення у Архіві"
+
+#: inc/customizer/option.php:291
+msgid "Image in Archive"
+msgstr "Зображення в архіві"
+
+#: inc/customizer/option.php:274
+msgid "Archive Layout"
+msgstr "Компонування архіву"
+
+#: inc/customizer/option.php:257
+msgid "Global Layout"
+msgstr "Глобальне компонування"
+
+#: inc/customizer/option.php:240
+msgid "Layout Options"
+msgstr "Параметри компонування"
+
+#: inc/customizer/option.php:230
+msgid "Enable Search Form"
+msgstr "Увімкнути форму пошуку"
+
+#: inc/customizer/option.php:214 inc/customizer/option.php:427
+msgid "Show Social Icons"
+msgstr "Показувати іконки соцмереж"
+
+#: inc/customizer/option.php:197
+msgid "Contact Address 2"
+msgstr "Контактна адреса 2"
+
+#: inc/customizer/option.php:180
+msgid "Contact Address 1"
+msgstr "Контактна адреса 1"
+
+#: inc/customizer/option.php:163
+msgid "Contact Email"
+msgstr "Контактний Email"
+
+#: inc/customizer/option.php:146
+msgid "Contact Number"
+msgstr "Контактний номер"
+
+#: inc/customizer/option.php:127
+msgid "Number of Posts"
+msgstr "Кількість записів"
+
+#: inc/customizer/option.php:108
+msgid "Ticker Category"
+msgstr "Категорія біжучої стрічки"
+
+#: inc/customizer/option.php:89
+msgid "Ticker Title"
+msgstr "Назва біжучої стрічки"
+
+#: inc/customizer/option.php:72
+msgid "Show News Ticker"
+msgstr "Показувати біжучу стрічку новин"
+
+#: inc/customizer/option.php:55
+msgid "Show Tagline"
+msgstr "Показувати ключову фразу"
+
+#: inc/customizer/option.php:39
+msgid "Show Site Title"
+msgstr "Показати назву сайту"
+
+#: inc/customizer/option.php:22
+msgid "Header Options"
+msgstr "Параметри заголовку"
+
+#: inc/customizer/option.php:13
+msgid "Theme Options"
+msgstr "Параметри теми"
+
+#: inc/customizer/home-sections.php:411 inc/customizer/option.php:455
+msgid "in words"
+msgstr "у словах"
+
+#: inc/customizer/home-sections.php:410 inc/customizer/option.php:454
+msgid "Excerpt Length"
+msgstr "Довжина уривка"
+
+#: inc/customizer/home-sections.php:392
+msgid "Image Size"
+msgstr "Розмір зображення"
+
+#: inc/customizer/home-sections.php:374
+msgid "Select Category"
+msgstr "Обрати категорію"
+
+#: inc/customizer/home-sections.php:355
+msgid "No of Blocks"
+msgstr "Кількість блоків"
+
+#: inc/customizer/home-sections.php:337
+msgid "Columns"
+msgstr "Колонки"
+
+#: inc/customizer/home-sections.php:319 inc/customizer/home-sections.php:323
+#: inc/metabox.php:58
+msgid "Layout"
+msgstr "Компонування"
+
+#: inc/customizer/home-sections.php:275
+msgid "Secondary Button URL"
+msgstr "URL другої кнопки"
+
+#: inc/customizer/home-sections.php:258
+msgid "Secondary Button Text"
+msgstr "Текст другої кнопки"
+
+#: inc/customizer/home-sections.php:241
+msgid "Primary Button URL"
+msgstr "URL основної кнопки"
+
+#: inc/customizer/home-sections.php:224
+msgid "Primary Button Text"
+msgstr "Текст основної кнопки"
+
+#: inc/customizer/home-sections.php:207
+msgid "Subtitle"
+msgstr "Підзаголовок"
+
+#: inc/customizer/home-sections.php:190 inc/customizer/home-sections.php:302
+msgid "Title"
+msgstr "Заголовок"
+
+#: inc/customizer/home-sections.php:173 inc/helper/options.php:306
+msgid "Call To Action"
+msgstr "Заклик до дії"
+
+#: inc/customizer/home-sections.php:162
+msgid "Events Category"
+msgstr "Категорія подій"
+
+#: inc/customizer/home-sections.php:143
+msgid "No of Events"
+msgstr "Кількість подій"
+
+#: inc/customizer/home-sections.php:126
+msgid "Events Title"
+msgstr "Заголовок подій"
+
+#: inc/customizer/home-sections.php:108
+msgid "News Category"
+msgstr "Категорія новин"
+
+#: inc/customizer/home-sections.php:89
+msgid "No of News"
+msgstr "Кількість новин"
+
+#: inc/customizer/home-sections.php:72
+msgid "News Title"
+msgstr "Заголовок новин"
+
+#: inc/customizer/home-sections.php:55 inc/helper/options.php:302
+msgid "News and Events"
+msgstr "Новини та події"
+
+#: inc/customizer/home-sections.php:43
+msgid "Toggle sections"
+msgstr "Перемкнути розділи"
+
+#: inc/customizer/home-sections.php:22
+msgid "Manage Sections"
+msgstr "Керувати розділами"
+
+#: inc/customizer/home-sections.php:13
+msgid "Homepage Sections"
+msgstr "Розділи головної сторінки"
+
+#: inc/customizer/default.php:101
+msgid "Read More"
+msgstr "Читати далі"
+
+#: inc/customizer/default.php:80 inc/customizer/home-sections.php:285
+#: inc/helper/options.php:310
+msgid "Latest News"
+msgstr "Останні новини"
+
+#: inc/customizer/default.php:76
+msgid "Online Tour"
+msgstr "Онлайн тур"
+
+#: inc/customizer/default.php:74 template-parts/home/latest-news.php:46
+msgid "Learn More"
+msgstr "Дізнатись більше"
+
+#: inc/customizer/default.php:73
+msgid "Every undergraduate student is eligible to receive a fellowship of up to $10,000 for a summer internship or faculty-mentored research project. Find your opportunity, make your case for how it fits your academic plans, and we will help fund it."
+msgstr "Кожен студент має право на отримання стипендії в розмірі до $10000 для літнього стажування або дослідницького проекту. Отримайте можливість оцінити, що відповідає вашим навчальним планам, і ми допоможемо з фінансуванням."
+
+#: inc/customizer/default.php:72
+msgid "Join Our University"
+msgstr "Вступайте до нашого університету"
+
+#: inc/customizer/default.php:67
+msgid "Events"
+msgstr "Події"
+
+#: inc/customizer/default.php:64
+msgid "News"
+msgstr "Новини"
+
+#: inc/customizer/default.php:54
+msgid "Read more"
+msgstr "Читати далі"
+
+#: inc/customizer/default.php:49
+msgid "Copyright &copy; All rights reserved."
+msgstr "Copyright © Усі права захищено."
+
+#: inc/customizer/default.php:25
+msgid "News:"
+msgstr "Новини:"
+
+#: inc/customizer/control.php:173 inc/widgets.php:145
+msgid "&mdash; Select &mdash;"
+msgstr "&mdash; Обрати &mdash;"
+
+#: functions.php:200
+msgid "Add widgets here to appear in your Secondary Sidebar."
+msgstr "Додайте віджети на другу бічну панель"
+
+#: functions.php:198
+msgid "Secondary Sidebar"
+msgstr "Друга бічна панель"
+
+#: functions.php:191
+msgid "Add widgets here to appear in your Primary Sidebar."
+msgstr "Додайте віджети на головну бічну панель "
+
+#: functions.php:189
+msgid "Primary Sidebar"
+msgstr "Головна бічна панель"
+
+#: functions.php:42
+msgid "404 Menu"
+msgstr "Меню 404"
+
+#: functions.php:41
+msgid "Social Menu"
+msgstr "Меню соцмереж"
+
+#: functions.php:40
+msgid "Footer Menu"
+msgstr "Нижнє меню"
+
+#: functions.php:39 inc/hook/custom.php:152
+msgid "Top Menu"
+msgstr "Верхнє меню"
+
+#: functions.php:38
+msgid "Primary Menu"
+msgstr "Головне меню"
+
+#: comments.php:90
+msgid "Comments are closed."
+msgstr "Коментарі закриті."
+
+#: comments.php:57 comments.php:78
+msgid "Newer Comments"
+msgstr "Новіші коментарі"
+
+#: comments.php:56 comments.php:77
+msgid "Older Comments"
+msgstr "Старіші коментарі"
+
+#: comments.php:53 comments.php:74
+msgid "Comment navigation"
+msgstr "Навігація коментарями"
+
+#. translators: 1: number of comments, 2: post title
+#: comments.php:37
+msgctxt "comments title"
+msgid "%1$s Reply to &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s Replies to &ldquo;%2$s&rdquo;"
+msgstr[0] "%1$s відповідь на &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s відповіді на &ldquo;%2$s&rdquo;"
+msgstr[2] "%1$s відповідей на &ldquo;%2$s&rdquo;"
+
+#. translators: %s: post title
+#: comments.php:33
+msgctxt "comments title"
+msgid "One Reply to &ldquo;%s&rdquo;"
+msgstr "Одна відповідь на &ldquo;%s&rdquo;"
+
+#: 404.php:23
+msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgstr "Схоже нічого не було знайдено. Спробуйте скористатися пошуком, або посиланнями нижче."
+
+#: 404.php:18
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Отакої! Цю сторінку не знайдено."
+
+#. Author URI of the theme
+#: style.css
+#, gp-priority: low
+msgid "https://wenthemes.com/"
+msgstr "http://wenthemes.com/"
+
+#. Theme URI of the theme
+#: style.css
+#, gp-priority: low
+msgid "https://wenthemes.com/item/wordpress-themes/university-hub/"
+msgstr "http://wenthemes.com/item/wordpress-themes/university-hub/"
+
+#. Author of the theme
+#: style.css inc/hook/custom.php:214
+#, gp-priority: low
+msgid "WEN Themes"
+msgstr "WEN Themes"

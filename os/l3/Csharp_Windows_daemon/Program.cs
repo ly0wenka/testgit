@@ -37,6 +37,17 @@ public class MyDaemonCsharp : ServiceBase
         workerThread?.Join();
     }
 
+    protected override void OnShutdown()
+    {
+        EventLog.WriteEntry(ServiceNameConst, "Служба завершує роботу через вимкнення системи.", EventLogEntryType.Information);
+
+        // Акуратно зупиняємо робочий потік
+        workerThread?.Interrupt();
+        workerThread?.Join();
+
+        base.OnShutdown();
+    }
+
     private void WorkerLoop()
     {
         try
@@ -46,7 +57,7 @@ public class MyDaemonCsharp : ServiceBase
                 Thread.Sleep(10000); // робота демона
             }
         }
-        catch (ThreadInterruptedException)
+        catch (Exception)
         {
             EventLog.WriteEntry(ServiceNameConst, "Демон завершив роботу через сигнал.", EventLogEntryType.Information);
         }
