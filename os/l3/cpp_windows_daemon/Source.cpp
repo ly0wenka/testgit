@@ -7,7 +7,7 @@ SERVICE_STATUS ServiceStatus;
 SERVICE_STATUS_HANDLE hStatus;
 
 void logMessage(const std::string& message) {
-    std::ofstream logFile("C:\\Users\\L\\Downloads\\New folder(175)\\testgit\\os\\l3\\cpp_windows_daemon\\x64\\Debug\\daemon_log.txt", std::ios::app);
+    std::ofstream logFile("S:\\Users\\L\\Downloads\\New folder(175)\\testgit\\os\\l3\\cpp_windows_daemon\\x64\\Debug\\daemon_log.txt", std::ios::app);
     logFile << message << std::endl;
 }
 
@@ -52,7 +52,7 @@ void installService() {
         schSCManager, L"MyDaemon", L"MyDaemon",  // Using wide-character strings
         SERVICE_ALL_ACCESS, SERVICE_WIN32_OWN_PROCESS,
         SERVICE_AUTO_START, SERVICE_ERROR_NORMAL,
-        L"C:\\Users\\L\\Downloads\\New folder(175)\\testgit\\os\\l3\\cpp_windows_daemon\\x64\\Debug\\cpp_windows_daemon.exe", NULL, NULL, NULL, NULL, NULL);  // Using wide-character strings
+        L"S:\\Users\\L\\Downloads\\New folder(175)\\testgit\\os\\l3\\cpp_windows_daemon\\x64\\Debug\\cpp_windows_daemon.exe", NULL, NULL, NULL, NULL, NULL);  // Using wide-character strings
     CloseServiceHandle(schService);
     CloseServiceHandle(schSCManager);
 }
