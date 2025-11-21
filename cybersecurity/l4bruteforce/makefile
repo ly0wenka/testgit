@@ -12,3 +12,4 @@ l4:
 	cp best110.txt passwords.txt
 	rm best.txt
 	set USERPASS_FILE passwords.txt
+	
