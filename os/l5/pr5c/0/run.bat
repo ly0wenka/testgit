@@ -1,0 +1,1 @@
+gcc l5.c -o l5.exe -lwinmm
