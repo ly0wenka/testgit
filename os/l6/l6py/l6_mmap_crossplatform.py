@@ -21,7 +21,14 @@ if sys.platform == 'win32':
         ]
 
     sys_info = SYSTEM_INFO()
+    
     ctypes.windll.kernel32.GetSystemInfo(ctypes.byref(sys_info))
+    
+    print("=== SYSTEM_INFO PARAMETERS ===")
+    for field_name, field_type in sys_info._fields_:
+        value = getattr(sys_info, field_name)
+        print(f"{field_name}: {value}")
+        
     SYSTEM_PAGE_SIZE = sys_info.dwPageSize
 else:
     import os

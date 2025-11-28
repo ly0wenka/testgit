@@ -1,5 +1,5 @@
 *.exe
-
+*.wav
 # Created by https://www.toptal.com/developers/gitignore/api/vs,visualstudio,c++
 # Edit at https://www.toptal.com/developers/gitignore?templates=vs,visualstudio,c++
 
