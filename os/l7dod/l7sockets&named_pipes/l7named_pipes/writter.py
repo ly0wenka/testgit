@@ -1,7 +1,7 @@
 import os
 import time
 
-fifo = 'myfifo'
+fifo = '/tmp/myfifo'
 
 # Створення FIFO, якщо не існує
 if not os.path.exists(fifo):

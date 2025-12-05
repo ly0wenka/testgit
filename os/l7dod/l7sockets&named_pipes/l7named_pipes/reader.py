@@ -1,6 +1,6 @@
 import os
 
-fifo = 'myfifo'
+fifo = '/tmp/myfifo'
 
 # Читання даних з каналу
 with open(fifo, 'r') as f:
