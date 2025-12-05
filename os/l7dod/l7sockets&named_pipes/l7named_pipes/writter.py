@@ -7,6 +7,7 @@ fifo = 'myfifo'
 if not os.path.exists(fifo):
     os.mkfifo(fifo)
 
+os.chmod(fifo, 0o666)  # rw-rw-rw-
 # Запис даних у канал
 with open(fifo, 'w') as f:
     for i in range(5):
