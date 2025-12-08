@@ -11,3 +11,17 @@ tcp:
 	set PORTS 20-5000
 	use payload/windows/meterpreter/bind_tcp
 
+meetthemsf7:
+	search name:java | grep rmi
+	help spool
+
+enumeration:
+	db_nmap -sS -sV -O -PN -p- 192.168.0.104
+	hosts
+	services
+	vulns
+enumerationsmb:
+	cewl -d 5 -m 7 -w /home/kali/Desktop/pass.txt https://github.com/rapid7/metasploitable3
+enummysql:
+	cd /home/kali/Desktop
+	wget https://github.com/danielmiessler/SecLists/blob/master/Passwords/Default-Credentials/mysql-betterdefaultpasslist.txt
