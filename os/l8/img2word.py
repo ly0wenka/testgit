@@ -1,16 +1,29 @@
 from docx import Document
-from docx.shared import Inches
+from docx.shared import Inches, Pt, RGBColor
+from docx.oxml.ns import qn
 from pathlib import Path
 
 folder = Path(r"S:\Users\L\Downloads\New folder (175)\testgit\os\l8\imgs")
 doc = Document()
 
-doc.add_heading("Зображення з теки imgs", level=1)
+# ---------------------------
+# Заголовок документа
+# ---------------------------
+heading = doc.add_heading("Зображення з теки imgs", level=1)
 
-# визначення стилю Caption
+# Arial 16
+run = heading.runs[0]
+run.font.name = 'Arial'
+run._element.rPr.rFonts.set(qn('w:eastAsia'), 'Arial')
+run.font.size = Pt(16)
+run.font.color.rgb = RGBColor(0, 0, 0)  # чорний
+
+# ---------------------------
+# Стиль підписів
+# ---------------------------
 caption_style = "Caption"
 if caption_style not in doc.styles:
-    if "Підпис" in doc.styles:  # українська версія Word
+    if "Підпис" in doc.styles:
         caption_style = "Підпис"
     else:
         caption_style = None
@@ -24,33 +37,47 @@ for img in sorted(folder.iterdir()):
     if img.suffix.lower() in exts:
 
         # ---------------------------
-        # 1. Додаємо текст-посилання
+        # 1. Текст-посилання
         # ---------------------------
         reference_text = f"На рис. {index} зображено {img.stem}."
         ref_p = doc.add_paragraph(reference_text)
-        ref_p.alignment = 0  # вирівнювання зліва
+        ref_p.alignment = 0  # ліворуч
 
-        doc.add_paragraph()  # невеликий відступ
+        run = ref_p.runs[0]
+        run.font.name = 'Arial'
+        run._element.rPr.rFonts.set(qn('w:eastAsia'), 'Arial')
+        run.font.size = Pt(14)
+        run.font.color.rgb = RGBColor(0, 0, 0)  # чорний
+
+        doc.add_paragraph()  # відступ
 
         # ---------------------------
-        # 2. Вставляємо зображення
+        # 2. Додаємо зображення
         # ---------------------------
         doc.add_picture(str(img), width=Inches(6))
 
         # ---------------------------
-        # 3. Додаємо підпис під малюнком
+        # 3. Підпис під малюнком
         # ---------------------------
         caption_text = f"Рис. {index} — {img.stem}"
         p = doc.add_paragraph(caption_text)
         if caption_style:
             p.style = caption_style
-        p.alignment = 1  # центр підпису
+        p.alignment = 1  # центр
 
-        doc.add_paragraph()  # відступ між блоками
+        run = p.runs[0]
+        run.font.name = 'Arial'
+        run._element.rPr.rFonts.set(qn('w:eastAsia'), 'Arial')
+        run.font.size = Pt(14)
+        run.font.color.rgb = RGBColor(0, 0, 0)  # чорний
+
+        doc.add_paragraph()  # відступ
 
         index += 1
 
-# вихідний файл
+# ---------------------------
+# Збереження документа
+# ---------------------------
 output_path = folder / "imgs.docx"
 doc.save(output_path)
 
