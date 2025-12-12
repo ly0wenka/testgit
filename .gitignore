@@ -1,5 +1,11 @@
 *.exe
 *.wav
+*.docx
+*.zip
+*.tar.gz
+os/l8/l8cpp/libzip/
+os/l8/l8cpp/pugixml/
+os/l8/l8java/target
 # Created by https://www.toptal.com/developers/gitignore/api/vs,visualstudio,c++
 # Edit at https://www.toptal.com/developers/gitignore?templates=vs,visualstudio,c++
 
@@ -77,7 +83,7 @@ bld/
 #wwwroot/
 
 # Visual Studio 2017 auto generated files
-Generated\ Files/
+Generated/ Files/
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
