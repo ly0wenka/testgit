@@ -6,6 +6,7 @@
 os/l8/l8cpp/libzip/
 os/l8/l8cpp/pugixml/
 os/l8/l8java/target
+web-html-docker\local-tourist-attractions-php-wordpress\
 web-html-docker/local-tourist-attractions-php-wordpress/wp_data
 # Created by https://www.toptal.com/developers/gitignore/api/vs,visualstudio,c++
 # Edit at https://www.toptal.com/developers/gitignore?templates=vs,visualstudio,c++
