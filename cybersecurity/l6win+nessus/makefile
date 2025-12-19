@@ -25,3 +25,5 @@ enumerationsmb:
 enummysql:
 	cd /home/kali/Desktop
 	wget https://github.com/danielmiessler/SecLists/blob/master/Passwords/Default-Credentials/mysql-betterdefaultpasslist.txt
+script:
+	nmap -sV --script=http-enum 192.168.0.104
