@@ -1,12 +1,8 @@
 import pyperclip
 
-# Get the current clipboard content
+# 1. Get the current clipboard content
+# 2. Put the uppercase text back to the clipboard
 text = pyperclip.paste()
-
-# Convert to uppercase
-upper_text = text.upper()
-
-# Put the uppercase text back to the clipboard
-pyperclip.copy(upper_text)
+pyperclip.copy(text.upper())
 
 print("Clipboard content converted to uppercase!")
