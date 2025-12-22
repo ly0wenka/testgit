@@ -27,3 +27,5 @@ enummysql:
 	wget https://github.com/danielmiessler/SecLists/blob/master/Passwords/Default-Credentials/mysql-betterdefaultpasslist.txt
 script:
 	nmap -sV --script=http-enum 192.168.0.104
+script-ftp:
+	nmap -sV --script=ftp-anon 192.168.0.104
