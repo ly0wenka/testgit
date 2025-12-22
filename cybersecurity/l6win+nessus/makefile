@@ -42,3 +42,5 @@ run-nse:
 	echo msfadmin > users.txt
 	echo msfadmin > pass.txt
 	nmap --script ftp-brute --script-args userdb=users.txt,passdb=pass.txt -p21 192.168.0.104
+nse-scan:
+	sudo nmap -sS scanme.nmap.org --top-ports 10 -T4
