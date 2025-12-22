@@ -29,3 +29,5 @@ script:
 	nmap -sV --script=http-enum 192.168.0.104
 script-ftp:
 	nmap -sV --script=ftp-anon 192.168.0.104
+script-smb:
+	nmap -sV --script=smb-vuln* -p139,445 192.168.0.104
