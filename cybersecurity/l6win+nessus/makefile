@@ -30,4 +30,9 @@ script:
 script-ftp:
 	nmap -sV --script=ftp-anon 192.168.0.104
 script-smb:
-	nmap -sV --script=smb-enum -p139,445 192.168.0.104
+	nmap -sV --script=smb-enum* -p139,445 192.168.0.104
+	nmap -sV --script=smb-brute -p139,445 192.168.0.104
+script-vulners:
+	nmap -sV --script=vulners 192.168.0.104
+script-base:
+	cat /usr/share/nmap/nselib/data/passwords.lst
