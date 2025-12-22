@@ -36,3 +36,5 @@ script-vulners:
 	nmap -sV --script=vulners 192.168.0.104
 script-base:
 	cat /usr/share/nmap/nselib/data/passwords.lst
+find-script:
+	find /usr/share/nmap/scripts -name "ftp-brute.nse"
