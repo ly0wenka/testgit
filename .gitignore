@@ -6,8 +6,8 @@
 *.gif
 key_log.txt
 mouse_log.txt
-os/l8/l8cpp/libzip/
-os/l8/l8cpp/pugixml/
+os/l8/l8cpp/l8cpp/libzip/
+os/l8/l8cpp/l8cpp/pugixml/
 os/l8/l8java/target
 web-html-docker\local-tourist-attractions-php-wordpress\
 web-html-docker/local-tourist-attractions-php-wordpress/wp_data

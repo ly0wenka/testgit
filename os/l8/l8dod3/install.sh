@@ -1,1 +1,0 @@
-sudo apt install python3-pyperclip python3-pystray python3-pil python3-pynput
