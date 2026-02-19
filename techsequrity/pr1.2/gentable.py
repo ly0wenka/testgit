@@ -98,3 +98,166 @@ for i, (key, value) in enumerate(incident.items()):
 doc.save("Звіт_CoreWin_Malware_UA.docx")
 
 print("DOCX файл успішно створено!")
+from docx import Document
+
+# Створення документа
+doc = Document()
+doc.add_heading('Звіт про кіберінцидент (SC Media)', level=1)
+
+incident = {
+    "Дата інциденту": "З середини 2024 р.; оприлюднено у 2026 р.",
+    "Постраждала організація": "Різні організації, що використовують Dell RecoverPoint for VMs",
+    "Кількість постраждалих": "Не розкрито (цільові атаки на корпоративні середовища)",
+    "Що було зроблено?": (
+        "Кіберугруповання UNC6201, пов’язане з Китаєм, експлуатувало "
+        "уразливість у Dell RecoverPoint for VMs версії 10.0 для отримання "
+        "стійкого доступу, збору даних та подальшого переміщення в мережі."
+    ),
+    "Які експлойти використовувалися?": (
+        "Експлуатація невідомої (ймовірно 0-day) уразливості в Dell RecoverPoint "
+        "for VMs 10.0 для віддаленого доступу та закріплення в системі."
+    ),
+    "Яким чином налагоджено захист?": (
+        "Оновлення та патчинг Dell RecoverPoint, ізоляція керуючих інтерфейсів, "
+        "використання MFA, моніторинг логів, контроль доступу та сегментація мережі."
+    ),
+    "Посилання": "https://www.scworld.com/news/china-linked-unc6201-exploits-10-0-bug-in-dell-recoverpoint-for-vms-since-mid-2024"
+}
+
+# Додавання таблиці
+table = doc.add_table(rows=len(incident), cols=2)
+table.style = 'Table Grid'
+
+for i, (key, value) in enumerate(incident.items()):
+    table.rows[i].cells[0].text = key
+    table.rows[i].cells[1].text = value
+
+# Збереження файлу
+doc.save("Звіт_UNC6201_Dell_RecoverPoint.docx")
+
+print("DOCX файл успішно створено!")
+from docx import Document
+
+# Створення документа
+doc = Document()
+doc.add_heading('Звіт про кіберінцидент (SC Media)', level=1)
+
+incident = {
+    "Дата інциденту": "Лютий 2026 р. (опубліковано дослідження)",
+    "Постраждала організація": "Користувачі Visual Studio Code та сумісних IDE (Cursor, Windsurf тощо)",
+    "Кількість постраждалих": (
+        "Потенційно мільйони розробників; вразливі розширення мають понад 125–128 млн завантажень"
+    ),
+    "Що було зроблено?": (
+        "Дослідники виявили критичні вразливості в популярних розширеннях VS Code, "
+        "які дозволяють виконання довільного коду та викрадення локальних файлів. "
+        "Атаки можливі через відкриття шкідливих конфігурацій, HTML-файлів або робочих просторів."
+    ),
+    "Які експлойти використовувалися?": (
+        "CVE-2025-65717 (Live Server), CVE-2025-65715 (Code Runner), "
+        "CVE-2025-65716 (Markdown Preview Enhanced); XSS та небезпечні налаштування workspace."
+    ),
+    "Яким чином налагоджено захист?": (
+        "Оновлення та видалення вразливих розширень, використання лише перевірених плагінів, "
+        "обмеження відкриття недовірених файлів/конфігурацій, моніторинг змін налаштувань IDE, "
+        "застосування принципу мінімальних привілеїв і контроль доступу до локальних ресурсів."
+    ),
+    "Посилання": "https://www.scworld.com/brief/critical-vscode-extension-vulnerabilities-could-lead-to-code-execution-and-data-theft"
+}
+
+# Додавання таблиці
+table = doc.add_table(rows=len(incident), cols=2)
+table.style = 'Table Grid'
+
+for i, (key, value) in enumerate(incident.items()):
+    table.rows[i].cells[0].text = key
+    table.rows[i].cells[1].text = value
+
+# Збереження
+doc.save("Звіт_VSCode_Extension_Vulnerabilities.docx")
+
+print("DOCX файл успішно створено!")
+from docx import Document
+
+# Створення документа
+doc = Document()
+doc.add_heading('Звіт про кіберінцидент (SC Media)', level=1)
+
+incident = {
+    "Дата інциденту": "Лютий 2026 р.",
+    "Постраждала організація": "Користувачі Google Chrome (Windows, macOS, Linux)",
+    "Кількість постраждалих": (
+        "Потенційно мільярди користувачів Chrome; активна експлуатація zero-day у дикій природі"
+    ),
+    "Що було зроблено?": (
+        "Google випустила екстрене оновлення Chrome для усунення активно "
+        "експлуатованої zero-day уразливості, що дозволяє виконання довільного коду "
+        "через спеціально сформовані вебсторінки."
+    ),
+    "Які експлойти використовувалися?": (
+        "CVE-2026-2441 — use-after-free у CSS компоненті Chrome; "
+        "можливе виконання довільного коду в sandbox через шкідливу HTML-сторінку."
+    ),
+    "Яким чином налагоджено захист?": (
+        "Негайне оновлення браузера до Chrome 145.0.7632.75/76 (Win/Mac) "
+        "або 144.0.7559.75 (Linux), застосування автоматичних оновлень, "
+        "моніторинг підозрілих вебресурсів, використання sandbox-захисту та EDR."
+    ),
+    "Посилання": "https://www.scworld.com/brief/google-releases-emergency-chrome-update-for-zero-day-exploit"
+}
+
+# Додавання таблиці
+table = doc.add_table(rows=len(incident), cols=2)
+table.style = 'Table Grid'
+
+for i, (key, value) in enumerate(incident.items()):
+    table.rows[i].cells[0].text = key
+    table.rows[i].cells[1].text = value
+
+# Збереження
+doc.save("Звіт_Chrome_ZeroDay_Exploit.docx")
+
+print("DOCX файл успішно створено!")
+from docx import Document
+
+# Створення документа
+doc = Document()
+doc.add_heading('Звіт про кіберінцидент (SC Media)', level=1)
+
+incident = {
+    "Дата інциденту": "Лютий 2026 р.",
+    "Постраждала організація": (
+        "WordPress-сайти, що використовують плагін WPvivid Backup & Migration"
+    ),
+    "Кількість постраждалих": (
+        "Понад 900 000 сайтів WordPress, що використовують вразливі версії плагіна"
+    ),
+    "Що було зроблено?": (
+        "Виявлено критичну вразливість, яка дозволяє неавторизованим зловмисникам "
+        "завантажувати довільні файли та виконувати віддалений код на сервері, "
+        "що може призвести до повного захоплення сайту."
+    ),
+    "Які експлойти використовувалися?": (
+        "CVE-2026-1357 — Unauthenticated Arbitrary File Upload, що призводить до RCE "
+        "через помилки обробки RSA-дешифрування та відсутність санітизації шляхів."
+    ),
+    "Яким чином налагоджено захист?": (
+        "Оновлення плагіна до версії 0.9.124 або новішої, вимкнення функції "
+        "'receive backup from another site', застосування WAF, контроль завантажень, "
+        "моніторинг логів та перевірка сайту на наявність вебшелів."
+    ),
+    "Посилання": "https://www.scworld.com/brief/critical-vulnerability-in-wpvivid-backup-plugin-allows-remote-code-execution"
+}
+
+# Додавання таблиці
+table = doc.add_table(rows=len(incident), cols=2)
+table.style = 'Table Grid'
+
+for i, (key, value) in enumerate(incident.items()):
+    table.rows[i].cells[0].text = key
+    table.rows[i].cells[1].text = value
+
+# Збереження файлу
+doc.save("Звіт_WPvivid_RCE_Vulnerability.docx")
+
+print("DOCX файл успішно створено!")
