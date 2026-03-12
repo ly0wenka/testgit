@@ -261,3 +261,47 @@ for i, (key, value) in enumerate(incident.items()):
 doc.save("Звіт_WPvivid_RCE_Vulnerability.docx")
 
 print("DOCX файл успішно створено!")
+from docx import Document
+
+# Створення документа
+doc = Document()
+doc.add_heading('Звіт про кіберінцидент (SC Media)', level=1)
+
+incident = {
+    "Дата інциденту": "Лютий 2026 р. (кампанія тривала майже десятиліття)",
+    "Постраждала організація": (
+        "Державні установи та телекомунікаційні компанії у багатьох країнах світу"
+    ),
+    "Кількість постраждалих": (
+        "Щонайменше 53 організації у 42 країнах; активність зафіксована майже у 70 країнах"
+    ),
+    "Що було зроблено?": (
+        "Google Threat Intelligence Group (GTIG) разом з Mandiant та партнерами "
+        "виявили та зупинили масштабну кампанію кіберрозвідки, яку проводила "
+        "група UNC2814, пов’язана з Китаєм. Було відключено інфраструктуру "
+        "зловмисників, заблоковано їхні облікові записи та проєкти в Google Cloud."
+    ),
+    "Які експлойти / шкідливе ПЗ використовувалися?": (
+        "Бекдор GRIDTIDE, який використовував Google Sheets API як канал "
+        "керування (C2). Команди передавались через таблиці Google Sheets, "
+        "що дозволяло маскувати шкідливий трафік під звичайний хмарний трафік."
+    ),
+    "Яким чином налагоджено захист?": (
+        "Виявлення та відключення інфраструктури атакуючих, відкликання доступів "
+        "до Google API, моніторинг SaaS-активності, контроль доступу, "
+        "сегментація мереж та використання індикаторів компрометації (IoC)."
+    ),
+    "Посилання": "https://www.scworld.com/news/google-disrupts-decade-long-china-linked-unc2814-espionage-campaign"
+}
+
+# Таблиця
+table = doc.add_table(rows=len(incident), cols=2)
+table.style = 'Table Grid'
+
+for i, (key, value) in enumerate(incident.items()):
+    table.rows[i].cells[0].text = key
+    table.rows[i].cells[1].text = value
+
+doc.save("Звіт_UNC2814_Espionage_Campaign.docx")
+
+print("DOCX файл успішно створено!")

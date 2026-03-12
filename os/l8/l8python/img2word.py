@@ -4,7 +4,7 @@ from docx.oxml.ns import qn
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from pathlib import Path
 
-folder = Path(r"S:\Users\L\Downloads\New folder (175)\testgit\os\l8\imgs")
+folder = Path(r"S:\Users\L\Downloads\New folder (18)")
 doc = Document()
 
 # Заголовок
