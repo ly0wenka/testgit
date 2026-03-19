@@ -305,3 +305,47 @@ for i, (key, value) in enumerate(incident.items()):
 doc.save("Звіт_UNC2814_Espionage_Campaign.docx")
 
 print("DOCX файл успішно створено!")
+
+from docx import Document
+
+# Створення документа
+doc = Document()
+doc.add_heading('Звіт про кіберінцидент (SC Media)', level=1)
+
+incident = {
+    "Дата інциденту": "Березень 2026 р.",
+    "Постраждала організація": (
+        "Організації, що використовують Windows 11 Enterprise з RRAS (Routing and Remote Access Service)"
+    ),
+    "Кількість постраждалих": (
+        "Не розкрито; потенційно корпоративні середовища з використанням RRAS і Windows Autopatch"
+    ),
+    "Що було зроблено?": (
+        "Microsoft випустила позапланове (out-of-band) оновлення KB5084597 для усунення "
+        "критичних вразливостей у службі RRAS. Оновлення розгортається як hotpatch "
+        "без необхідності перезавантаження систем."
+    ),
+    "Які експлойти використовувалися?": (
+        "CVE-2026-25172, CVE-2026-25173, CVE-2026-26111 — уразливості RRAS, що дозволяють "
+        "віддалене виконання коду (RCE) при підключенні до шкідливого сервера."
+    ),
+    "Яким чином налагоджено захист?": (
+        "Встановлення оновлення KB5084597, використання Windows Autopatch, "
+        "обмеження підключень до недовірених серверів, моніторинг мережевої активності, "
+        "сегментація доступу та контроль прав користувачів."
+    ),
+    "Посилання": "https://www.scworld.com/brief/microsoft-releases-out-of-band-update-for-windows-11-rras-vulnerabilities"
+}
+
+# Додавання таблиці
+table = doc.add_table(rows=len(incident), cols=2)
+table.style = 'Table Grid'
+
+for i, (key, value) in enumerate(incident.items()):
+    table.rows[i].cells[0].text = key
+    table.rows[i].cells[1].text = value
+
+# Збереження
+doc.save("Звіт_Windows11_RRAS_Vulnerabilities.docx")
+
+print("DOCX файл успішно створено!")
