@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Local Tourist Attractions</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+    }
+
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 1.5rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 2rem;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      max-width: 300px;
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 1rem;
+    }
+
+    .card-content h2 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      color: #004080;
+    }
+
+    .card-content p {
+      color: #333;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #eee;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Explore Local Attractions</h1>
+    <p>Discover the best places to visit in your area</p>
+  </header>
+
+  <main class="container">
+    <!-- Attraction 1 -->
+    <div class="card">
+      <img src="img\1.jpg" alt="City Museum" />
+      <div class="card-content">
+        <h2>City Museum</h2>
+        <p>Explore local history, art, and culture at the city's top-rated museum. Open daily from 10am–6pm.</p>
+      </div>
+    </div>
+
+    <!-- Attraction 2 -->
+    <div class="card">
+      <img src="img\2.jpg" alt="Central Park" />
+      <div class="card-content">
+        <h2>Central Park</h2>
+        <p>Relax in nature, enjoy walking trails, or have a picnic in this urban oasis in the heart of the city.</p>
+      </div>
+    </div>
+
+    <!-- Attraction 3 -->
+    <div class="card">
+      <img src="img\3.jpg" alt="Old Castle" />
+      <div class="card-content">
+        <h2>Historic Castle</h2>
+        <p>A medieval fortress with guided tours, towers, and panoramic views of the surrounding area.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Local Tourism Board. All rights reserved.
+  </footer>
+
+</body>
+</html>
