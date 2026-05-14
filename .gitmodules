@@ -1,3 +1,6 @@
 [submodule "ccna-simulator"]
 	path = ccna-simulator
 	url = https://github.com/ly0wenka/ccna-simulator.git
+[submodule "osm-android"]
+	path = osm-android
+	url = https://github.com/ly0wenka/osm
