@@ -695,3 +695,113 @@ for i, (key, value) in enumerate(incident.items()):
 doc.save("Звіт_Secure_Data_Act_USA.docx")
 
 print("DOCX файл успішно створено!")
+
+from docx import Document
+
+# Створення документа
+doc = Document()
+doc.add_heading('Звіт про кіберінцидент / регуляторні ризики (SC Media)', level=1)
+
+incident = {
+    "Дата інциденту": "Квітень 2026 р. (звіт Gartner)",
+    "Постраждала організація": (
+        "Компанії США, що порушують вимоги щодо конфіденційності даних"
+    ),
+    "Кількість постраждалих": (
+        "Сотні компаній; загальна сума штрафів перевищила $3.45 млрд"
+    ),
+    "Що було зроблено?": (
+        "Gartner повідомила про різке зростання штрафів за порушення "
+        "конфіденційності даних у США через посилення регуляторного контролю."
+    ),
+    "Які проблеми / ризики виявлено?": (
+        "Недотримання privacy-законів штатів США, слабкий контроль обробки даних, "
+        "ризики AI та автоматизації, недостатній захист персональних даних."
+    ),
+    "Суть проблеми": (
+        "Регулятори США перейшли від рекомендацій до активного накладання штрафів. "
+        "Багато компаній були не готові до жорсткого enforcement-підходу."
+    ),
+    "Яким чином налагоджено захист?": (
+        "Розвиток privacy-programs, аудит даних, DLP-рішення, "
+        "контроль AI-систем, data governance, моніторинг відповідності "
+        "законам штатів та регулярні перевірки безпеки."
+    ),
+    "Додаткові ризики": (
+        "Зростання використання AI та автоматизації підвищує ризики "
+        "витоку даних і може спричинити ще більші регуляторні штрафи."
+    ),
+    "Посилання": "https://www.scworld.com/brief/us-privacy-fines-skyrocket-past-3-4b-gartner-reports"
+}
+
+# Таблиця
+table = doc.add_table(rows=len(incident), cols=2)
+table.style = 'Table Grid'
+
+for i, (key, value) in enumerate(incident.items()):
+    table.rows[i].cells[0].text = key
+    table.rows[i].cells[1].text = value
+
+# Збереження
+doc.save("Звіт_US_Privacy_Fines_Gartner.docx")
+
+print("DOCX файл успішно створено!")
+
+from docx import Document
+
+# Створення документа
+doc = Document()
+doc.add_heading('Звіт про кіберінцидент (SC Media)', level=1)
+
+incident = {
+    "Дата інциденту": "Травень 2026 р.",
+    "Постраждала організація": (
+        "Організації та користувачі, які отримують email через Amazon SES"
+    ),
+    "Кількість постраждалих": (
+        "Не вказано; атаки мають глобальний масштаб та масове поширення"
+    ),
+    "Що було зроблено?": (
+        "Дослідники повідомили про масштабне використання Amazon Simple Email Service "
+        "(SES) для проведення sophisticated phishing та BEC-атак."
+    ),
+    "Які техніки / експлойти використовувалися?": (
+        "Використання викрадених AWS IAM-ключів, phishing, Business Email Compromise (BEC), "
+        "DocuSign-lures, spoofed email threads, AWS-hosted phishing pages."
+    ),
+    "Суть атаки": (
+        "Зловмисники використовують легітимну інфраструктуру Amazon SES для розсилки "
+        "фішингових листів, які успішно проходять SPF, DKIM та DMARC перевірки."
+    ),
+    "Як отримували доступ?": (
+        "AWS IAM-ключі викрадалися з GitHub-репозиторіїв, .ENV-файлів, Docker-образів, "
+        "резервних копій та відкритих S3-bucket."
+    ),
+    "Чому атака небезпечна?": (
+        "Оскільки Amazon SES є довіреним сервісом, листи складніше блокувати, "
+        "а reputation-based захист часто не спрацьовує."
+    ),
+    "Яким чином налагоджено захист?": (
+        "Принцип least privilege для IAM, MFA, ротація ключів, "
+        "моніторинг SES-активності, secrets scanning, контроль GitHub-репозиторіїв "
+        "та поведінковий аналіз email-трафіку."
+    ),
+    "Додаткові ризики": (
+        "Атакуючі дедалі частіше використовують trusted cloud infrastructure "
+        "для обходу класичних email security systems."
+    ),
+    "Посилання": "https://www.scworld.com/brief/amazon-ses-abused-for-sophisticated-phishing-attacks"
+}
+
+# Додавання таблиці
+table = doc.add_table(rows=len(incident), cols=2)
+table.style = 'Table Grid'
+
+for i, (key, value) in enumerate(incident.items()):
+    table.rows[i].cells[0].text = key
+    table.rows[i].cells[1].text = value
+
+# Збереження файлу
+doc.save("Звіт_Amazon_SES_Phishing.docx")
+
+print("DOCX файл успішно створено!")
